@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- App Name and Entry Screen Buttons Names-->
+    <string name="app_name">Autogenic Training</string>
+    <string name="E_B_1">Start</string>
+    <string name="E_B_2">Informations</string>
+    <string name="E_B_3">Options</string>
+
+
+    <!-- Parameters to Add_exercise_Fragment -->
+    <string name="relax">Relax Level</string>
+    <string name="phy_sens">Physical Sentations (Optional)</string>
+    <string name="remark">Remarks (Optional)</string>
+    <string name="Add_Morning">Morning</string>
+    <string name="Add_Anoon">Day</string>
+    <string name="Add_Night">Night</string>
+
+
+    <!-- Parameters to Week Status Fragment -->
+    <!-- Weekdays in English-->
+    <string-array name="Week_Weekdays">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <!-- Week Specific Text -->
+    <string-array name="Week_Text">
+        <item>I am completely calm</item>
+        <item>My body is heavy</item>
+        <item>My body is warm</item>
+        <item>My breathing is calm and relaxed</item>
+        <item>My breathing is calm and regular</item>
+        <item>My solar plexus is warm</item>
+        <item>My forehead is pleasantly cool</item>
+    </string-array>
+
+
+    <!-- First Time Section-->
+    <!-- Name Date Values-->
+    <string name="Name_Date_text">Before we get started we need a few extra information in order to set up the application for you!</string>
+    <string name="Name_Date_date">When will/did you start?</string>
+    <string name="Name_Date_name">What\'s your name?</string>
+
+    <!-- Quiz Values -->
+    <string name="Quiz_Number">Question %1$d:</string>
+    <string name="Quiz_Final_Text">Thank you for completing the test. Your answers will help us evaluate your progress at the end of the eight weeks of training!</string>
+    <string-array name="Quiz_Questions">
+        <item>How do you feel about this quiz?</item>
+        <item>Do you like the UI of this application?</item>
+    </string-array>
+    <string-array name="Quiz_Answers">
+        <item>Strongly Disagree</item>
+        <item>Disagree</item>
+        <item>Neutral</item>
+        <item>Agree</item>
+        <item>Strongly Agree</item>
+    </string-array>
+
+    <!-- Start Screen Values-->
+    <string name="Start_Welcome">Welcome back %1$s!</string>
+    <string name="Start_ButtonStatus">Week Status</string>
+    <string name="Start_ButtonProgress">Weekly Progress</string>
+    <string name="Start_ButtonStatistics">Statistics</string>
+
+
+    <!-- Progress Activity-->
+    <string name="Progress_Week">week</string>
+
+    <!-- Statistics Activity -->
+    <string-array name="Statistics_StatToggle">
+        <item>Frequency</item>
+        <item>Relax</item>
+        <item>Period</item>
+    </string-array>
+    <string-array name="Statistics_TimeValues">
+        <item>Weekly</item>
+        <item>Total</item>
+    </string-array>
+    <string-array name="Statistics_WeekToggle">
+        <item>W1</item>
+        <item>W2</item>
+        <item>W3</item>
+        <item>W4</item>
+        <item>W5</item>
+        <item>W6</item>
+        <item>W7</item>
+    </string-array>
+
+    <!-- Notification Server Strings-->
+    <string name="Service_Text">%1$s, time for your %2$s exercise!</string>
+    <string name="Service_Title">Exercise reminder!</string>
+
+
+    <!-- Intent Parameters -->
+    <string name="Intent_Day">intent_day</string>
+    <string name="Intent_Month">intent_month</string>
+    <string name="Intent_Year">intent_year</string>
+    <string name="Intent_WeekDay">intent_weekday</string>
+    <string name="Intent_ElapsedDays">intent_elapseddays</string>
+    <string name="Intent_WeekNumber">intent_weeknumber</string>
+    <string name="Intent_Notification_0">Morning_Intent</string>
+    <string name="Intent_Notification_1">Afternoon_Intent</string>
+    <string name="Intent_Notification_2">Night_Intent</string>
+
+    <!-- Shared Preferences for State of App-->
+    <string name="Pref_FileName">LallaAppPreferences</string>
+    <string name="Pref_first_time_starting">first_time</string>
+    <string name="Pref_name">username</string>
+    <string name="Pref_date">FirstDayDate</string>
+    <string name="Pref_day">FirstDay_Day</string>
+    <string name="Pref_month">FirstDay_Month</string>
+    <string name="Pref_year">FirstDay_Year</string>
+    <string name="Pref_dayofweek">FirstDay_DayOfWeek</string>
+    <string name="Pref_Notification_0">Morning_Notification</string>
+    <string name="Pref_Notification_1">Afternoon_Notification</string>
+    <string name="Pref_Notification_2">Night_Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
+

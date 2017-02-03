@@ -1,0 +1,219 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mstb="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.ricardomartins.lallaapp.Week.Add_Exercise_Fragment"
+    android:backgroundTintMode="src_over"
+    android:background="@color/Add_bg"
+    android:weightSum="1"
+    android:id="@+id/Add_layout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.075"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/date"
+            android:text="data"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.075"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp">
+
+        <TextView
+            android:text="period"
+            android:layout_height="match_parent"
+            android:id="@+id/period"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.075"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/relax"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:clickable="false"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.075"
+        android:background="@drawable/rectangle_inactive"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <SeekBar
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:max="10"
+            android:progress="5"
+            android:id="@+id/relax"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:clickable="false"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_weight="0.075">
+
+        <TextView
+            android:text="@string/phy_sens"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="0.075"
+        android:background="@drawable/rectangle_inactive">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/physical"
+            android:layout_weight="1"
+            android:text="ola"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLines="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_weight="0.075">
+
+        <TextView
+            android:text="@string/remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_inactive"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="0.075">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/remark"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4">
+
+        <Button
+            android:text="save"
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:elevation="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_vertical|center_horizontal" />
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ricardomartins.lallaapp.Statistics.Fragment_Frequency_BarChart">
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/Statistics_Freq_Type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <com.github.mikephil.charting.charts.BarChart android:id="@+id/Statistics_Bar_Week1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_above="@+id/Statistics_WeekToggle"
+        android:layout_below="@+id/Statistics_Freq_Type"
+        android:visibility="invisible"/>
+
+    <com.github.mikephil.charting.charts.ScatterChart android:id="@+id/Statistics_Scatter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_above="@+id/Statistics_WeekToggle"
+        android:layout_below="@+id/Statistics_Freq_Type"
+        android:visibility="visible"/>
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/Statistics_WeekToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

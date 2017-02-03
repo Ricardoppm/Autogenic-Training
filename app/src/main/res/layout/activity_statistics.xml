@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ricardomartins.lallaapp.Statistics.Activity_Statistics"
+    android:layout_alignParentBottom="false">
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/Statistics_StatToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/Statistics_StatToggle"
+        android:id="@+id/Statistics_ChartLayout">
+    </FrameLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ricardomartins.lallaapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainScreens.EntryScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainScreens.StartScreen" />
+        <activity android:name=".Pager_Activities.InfoScreen" />
+        <activity android:name=".MainScreens.OptScreen" />
+        <activity android:name=".Week.WeekStatus" />
+        <activity android:name=".Exercise_Activity" />
+        <activity android:name=".First_Time_Quizz.First_Time_Activity" />
+        <activity android:name=".Week.Activity_Progress" />
+        <activity android:name=".Pager_Activities.Activity_HelpPager" />
+        <activity android:name=".Statistics.Activity_Statistics" />
+
+        <service
+            android:name=".Notification.Service_Notification">
+            <intent-filter>
+                <action android:name="my.package.NotificationService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".Notification.BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+</manifest>

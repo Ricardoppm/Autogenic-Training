@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ricardomartins.lallaapp.Week.Week_Fragment"
+    android:orientation="vertical"
+    android:id="@+id/Week_fragmentLayout">
+
+    <TextView
+        android:text="@string/Name_Date_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Week_phrase"
+        android:background="@color/Week_7"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:padding="20dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/week_list">
+
+    </FrameLayout>
+
+
+</LinearLayout>

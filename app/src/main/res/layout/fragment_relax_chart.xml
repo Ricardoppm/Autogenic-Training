@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ricardomartins.lallaapp.Statistics.Fragment_Relax_BarChart">
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/Statistics_Relax_Type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <com.github.mikephil.charting.charts.LineChart android:id="@+id/Statistics_Relax_Chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_above="@+id/Statistics_WeekToggle_Relax"
+        android:layout_below="@+id/Statistics_Relax_Type"/>
+
+    <org.honorato.multistatetogglebutton.MultiStateToggleButton
+        android:id="@+id/Statistics_WeekToggle_Relax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

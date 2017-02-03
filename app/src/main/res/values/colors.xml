@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <color name="default_screen_bg">#f9f9f9</color>
+    <color name="rounded_container_bg">#BFFFB27B</color>
+    <color name="rounded_container_border">#3b3f44</color>
+    <color name="light_gray_header_color">#646663</color>
+    <color name="Yellow">#ffea00</color>
+    <color name="Red">#ff0011</color>
+    <color name="Blue">#0055ff</color>
+
+    <color name="Week_1">#003cb5</color>
+    <color name="Week_2">#4e230f</color>
+    <color name="Week_3">#fc7f18</color>
+    <color name="Week_4">#bb0000</color>
+    <color name="Week_5">#78c51a</color>
+    <color name="Week_6">#ffdd00</color>
+    <color name="Week_7">#5fc4e3</color>
+
+    <color name="Stats_Freq">#353385</color>
+    <color name="Toggle_on">#302f83</color>
+    <color name="Toggle_off">#ffc800</color>
+    <color name="Entry_Background">#2dedc4</color>
+    <color name="Add_bg">#ededed</color>
+
+    <array name="Week_Colors">
+        <item>@color/Week_1</item>
+        <item>@color/Week_2</item>
+        <item>@color/Week_3</item>
+        <item>@color/Week_4</item>
+        <item>@color/Week_5</item>
+        <item>@color/Week_6</item>
+        <item>@color/Week_7</item>
+    </array>
+</resources>
