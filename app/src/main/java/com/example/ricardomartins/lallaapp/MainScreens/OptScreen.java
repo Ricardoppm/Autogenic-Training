@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.widget.Button;
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
 import com.example.ricardomartins.lallaapp.Database.DatabaseHelper;
 import com.example.ricardomartins.lallaapp.R;
+
+import java.util.Locale;
 
 public class OptScreen extends AppCompatActivity {
 
@@ -43,13 +46,51 @@ public class OptScreen extends AppCompatActivity {
                 BChangeOptions = true;
             }
         });
+
+        Button Benglish = (Button) findViewById(R.id.Opt_English);
+        Benglish.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Log.i("Opt", "Changing to english");
+
+                Locale locale = new Locale("en");
+                Locale.setDefault(locale);
+                Configuration config = getBaseContext().getResources().getConfiguration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config,
+                        getBaseContext().getResources().getDisplayMetrics());
+                RestartActivity(); //Run the method as the last thing
+
+            }
+        });
+
+        Button Bitalia = (Button) findViewById(R.id.Opt_Italian);
+        Bitalia.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Log.i("Opt", "Changing to italian");
+
+                Locale locale = new Locale("it");
+                Locale.setDefault(locale);
+                Configuration config = getBaseContext().getResources().getConfiguration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config,
+                        getBaseContext().getResources().getDisplayMetrics());
+                RestartActivity(); //Run the method as the last thing
+
+            }
+        });
+    }
+
+    //Restarts the activity after changing the languages
+    private void RestartActivity(){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 
     @Override
     public void onBackPressed() {
         Intent returnIntent = new Intent();
-        if(BChangeOptions) setResult(Activity.RESULT_OK, returnIntent);
-        else setResult(Activity.RESULT_CANCELED, returnIntent);
+        setResult(Activity.RESULT_OK, returnIntent);
         finish();
     }
 }

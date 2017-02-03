@@ -101,13 +101,11 @@ public class EntryScreen extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // Check which request we're responding to
         if (requestCode == OptionExitResult) {
-            if (resultCode == RESULT_OK) {
-                Log.i("Entry", "Exited with Ok, Update vars");
-                // User altered things
-                first_time = sharedPref.getBoolean(getString(R.string.Pref_first_time_starting), true);
-            }else{
-                Log.i("Entry", "Exited with Canceled");
-            }
+            Log.i("Entry", "Exited from options");
+
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
     }
 }

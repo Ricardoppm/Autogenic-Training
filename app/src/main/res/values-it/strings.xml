@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Name and Entry Screen Buttons Names-->
+    <string name="app_name">Training Autogeno</string>
+    <string name="E_B_1">Inizio</string>
+    <string name="E_B_2">Informazione</string>
+    <string name="E_B_3">opzione</string>
+
+    <!-- Options Menu values-->
+    <string name="Opt_MenuName">Menu Opzione</string>
+    <string name="Opt_Notification">Notificazione:</string>
+    <string name="Opt_Language">Linguagio:</string>
+    <string name="Opt_Reset">Reset Applicazione</string>
+
+    <!-- Start Screen Values-->
+    <string name="Start_Welcome">Bienvenuto %1$s!</string>
+    <string name="Start_ButtonStatus">Settimana attuale</string>
+    <string name="Start_ButtonProgress">Progresso Settimanale</string>
+    <string name="Start_ButtonStatistics">Statistiche</string>
+
+</resources>

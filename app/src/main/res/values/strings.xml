@@ -6,6 +6,11 @@
     <string name="E_B_2">Informations</string>
     <string name="E_B_3">Options</string>
 
+    <!-- Options Menu values-->
+    <string name="Opt_MenuName">Options Menu</string>
+    <string name="Opt_Notification">Notifications:</string>
+    <string name="Opt_Language">Language:</string>
+    <string name="Opt_Reset">Reset Application</string>
 
     <!-- Parameters to Add_exercise_Fragment -->
     <string name="relax">Relax Level</string>
