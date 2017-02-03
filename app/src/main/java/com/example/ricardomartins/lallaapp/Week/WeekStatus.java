@@ -1,13 +1,17 @@
 package com.example.ricardomartins.lallaapp.Week;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
 import com.example.ricardomartins.lallaapp.Database.DatabaseHelper;
@@ -26,21 +30,71 @@ public class WeekStatus extends AppCompatActivity implements ExerciseFragment.On
     private SQLiteDatabase db;
     private int weeknumber;
 
+    private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week_status);
+
+        SharedPreferences sharedPreferences = this.getSharedPreferences(getString(R.string.Pref_FileName), Context.MODE_PRIVATE);
+
+        intent = getIntent();
+        weeknumber = intent.getIntExtra(getString(R.string.Intent_WeekNumber),0);
 
         dbHelper = new DatabaseHelper(getApplicationContext());
         db = dbHelper.getWritableDatabase();
 
         fm = getSupportFragmentManager();
 
-        Intent intent = getIntent();
+        int lastShownWeek = sharedPreferences.getInt(getString(R.string.Pref_FirstTimeWeekDisplay),-1);
+        Log.i("WeekAct", "We are on "+weeknumber + " and the saved was " + lastShownWeek);
+
+        if( lastShownWeek < weeknumber){
+            setContentView(R.layout.fragment_week_messagedisplay);
+            TextView phrase = (TextView) findViewById(R.id.Week_PhraseDisplay);
+
+            String[] week_text = getResources().getStringArray(R.array.Week_Text);
+
+
+            phrase.setText( week_text[weeknumber]);
+
+            Log.i("WeekAct", "Waiting 5!");
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt(getString(R.string.Pref_FirstTimeWeekDisplay), weeknumber);
+            editor.commit();
+
+            final Handler mhandler = new Handler();
+            new Thread( new Thread() {
+                @Override
+                public void run() {
+                    // This is the delay
+                    try{
+                        this.sleep(1000*5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    mhandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            startFragment();
+                        }
+                    });
+
+                }
+            }).start();
+        }else{
+            startFragment();
+        }
+
+
+
+    }
+
+    private void startFragment(){
+        setContentView(R.layout.activity_week_status);
 
         Log.i("Stuff", "Display Values: " + intent.getIntExtra(getString(R.string.Intent_Day), -1) + " _ " + intent.getIntExtra(getString(R.string.Intent_Month), -1) + " _ " + intent.getIntExtra(getString(R.string.Intent_Year), -1) + " _ " + intent.getIntExtra(getString(R.string.Intent_WeekDay),-1) + "_" + intent.getIntExtra(getString(R.string.Intent_ElapsedDays),-1) + " _ " + intent.getIntExtra(getString(R.string.Intent_WeekNumber),-1));
-
-        weeknumber = intent.getIntExtra(getString(R.string.Intent_WeekNumber),0);
 
         list = Week_Fragment.newInstance(
                 intent.getIntExtra(getString(R.string.Intent_Day), 1),
@@ -51,8 +105,8 @@ public class WeekStatus extends AppCompatActivity implements ExerciseFragment.On
                 weeknumber  );
 
         fm.beginTransaction()
-        .add(R.id.Week_Frame_layout, list, "week_frag")
-        .commit();
+                .add(R.id.Week_Frame_layout, list, "week_frag")
+                .commit();
         fm.executePendingTransactions();
     }
 

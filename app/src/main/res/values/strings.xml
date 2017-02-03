@@ -119,9 +119,7 @@
     <string name="Pref_Notification_0">Morning_Notification</string>
     <string name="Pref_Notification_1">Afternoon_Notification</string>
     <string name="Pref_Notification_2">Night_Notification</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Pref_FirstTimeWeekDisplay">first_time_week</string>
 
 
 </resources>

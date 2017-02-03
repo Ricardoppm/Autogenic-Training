@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
 import com.example.ricardomartins.lallaapp.Database.DatabaseHelper;
+import com.example.ricardomartins.lallaapp.DateCalculator.DateCalculator;
 import com.example.ricardomartins.lallaapp.R;
 import com.example.ricardomartins.lallaapp.MainScreens.StartScreen;
 
@@ -128,6 +129,15 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
     }
 
     private void SaveValuesContinue(){
+
+        DateCalculator dateCalculator = new DateCalculator(
+                newCalendar.get(Calendar.DAY_OF_MONTH),
+                newCalendar.get(Calendar.MONTH),
+                newCalendar.get(Calendar.YEAR)
+        ); // get datecalculator to save which week we are on
+
+
+
         SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(getString(R.string.Pref_date), DateInput.getText().toString());
@@ -135,8 +145,11 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         editor.putInt(getString(R.string.Pref_day), newCalendar.get(Calendar.DAY_OF_MONTH));
         editor.putInt(getString(R.string.Pref_month), newCalendar.get(Calendar.MONTH));
         editor.putInt(getString(R.string.Pref_year), newCalendar.get(Calendar.YEAR));
-
+        editor.putInt(getString(R.string.Pref_FirstTimeWeekDisplay), dateCalculator.getCurrentWeekIndex()-1);
         editor.commit();
+
+
+
 
         setContentView(R.layout.fragment_simple_layout);
 
