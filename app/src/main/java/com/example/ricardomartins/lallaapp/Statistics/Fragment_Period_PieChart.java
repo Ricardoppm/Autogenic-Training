@@ -24,6 +24,7 @@ import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Fragment_Period_PieChart extends Fragment {
@@ -137,7 +138,7 @@ public class Fragment_Period_PieChart extends Fragment {
         dataSet.setColors(new int[] { R.color.Red, R.color.Yellow, R.color.Blue, R.color.colorAccent }, getContext());
         
         PieData data = new PieData(dataSet);
-        data.setValueFormatter(new PercentFormatter());
+        data.setValueFormatter(new PercentFormatter( new DecimalFormat("###,###,##0")));
         data.setValueTextSize(11f);
         data.setValueTextColor(Color.WHITE);
         mChart.setData(data);

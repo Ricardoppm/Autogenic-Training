@@ -161,11 +161,7 @@ public class Fragment_Frequency_BarChart extends Fragment {
 
 
         Legend ls = sChart.getLegend();
-        ls.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
-        ls.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        ls.setOrientation(Legend.LegendOrientation.VERTICAL);
-        ls.setDrawInside(false);
-        ls.setXOffset(5f);
+        ls.setEnabled(false);
 
         YAxis yl = sChart.getAxisLeft();
         yl.setAxisMinimum(0.5f); // this replaces setStartAtZero(true)
@@ -174,14 +170,16 @@ public class Fragment_Frequency_BarChart extends Fragment {
         yl.setValueFormatter( new ScatterYAxisValueFormatter());
         sChart.getAxisRight().setEnabled(false);
 
+
         XAxis xl = sChart.getXAxis();
         xl.setDrawGridLines(false);
         xl.setValueFormatter( new MyXAxisValueFormatter(getAxisValues()) );
         xl.setAxisMinimum(-0.5f);
         xl.setAxisMaximum(6.5f);
         xl.setGranularity(1f);
-        xl.setTextSize(5f);
+        xl.setTextSize(10f);
         xl.setPosition(XAxis.XAxisPosition.BOTTOM);
+
 
         setWeekDataScatter(0);
 
@@ -206,7 +204,7 @@ public class Fragment_Frequency_BarChart extends Fragment {
         xAxis.setValueFormatter( new MyXAxisValueFormatter(getAxisValues()) );
         xAxis.setDrawGridLines(false);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setTextSize(5f);
+        xAxis.setTextSize(10f);
 
 
 
@@ -269,18 +267,18 @@ public class Fragment_Frequency_BarChart extends Fragment {
         }
 
         // create a dataset and give it a type
-        ScatterDataSet set1 = new ScatterDataSet(yVals1, "Morning");
+        ScatterDataSet set1 = new ScatterDataSet(yVals1, getString(R.string.Add_Morning));
         set1.setScatterShape(ScatterChart.ScatterShape.SQUARE);
         set1.setColor(Color.rgb(100, 240, 100));
         set1.setDrawValues(false);
 
-        ScatterDataSet set2 = new ScatterDataSet(yVals2, "Day");
+        ScatterDataSet set2 = new ScatterDataSet(yVals2, getString(R.string.Add_Anoon));
         set2.setScatterShape(ScatterChart.ScatterShape.SQUARE);
         set2.setScatterShapeHoleColor(ColorTemplate.COLORFUL_COLORS[3]);
         set2.setDrawValues(false);
         set2.setColor(Color.rgb(240, 35, 35));
 
-        ScatterDataSet set3 = new ScatterDataSet(yVals3, "Night");
+        ScatterDataSet set3 = new ScatterDataSet(yVals3, getString(R.string.Add_Night));
         set3.setScatterShape(ScatterChart.ScatterShape.SQUARE);
         set3.setColor(Color.rgb(20, 37, 240));
         set3.setDrawValues(false);
@@ -411,7 +409,7 @@ public class Fragment_Frequency_BarChart extends Fragment {
     }
 
     private String[] getAxisValues(){
-        String[] weekdays = getResources().getStringArray(R.array.Week_Weekdays);
+        String[] weekdays = getResources().getStringArray(R.array.Stat_Weekdays);
 
         String[] returnarray = new String[7];
 

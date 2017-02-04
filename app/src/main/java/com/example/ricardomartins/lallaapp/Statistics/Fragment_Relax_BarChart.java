@@ -184,7 +184,7 @@ public class Fragment_Relax_BarChart extends Fragment {
         xAxis.setValueFormatter( valueFormatter );
         xAxis.setDrawGridLines(false);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setTextSize(5f);
+        xAxis.setTextSize(10f);
 
 
 
@@ -365,7 +365,7 @@ public class Fragment_Relax_BarChart extends Fragment {
     }
 
     private String[] getAxisValues(){
-        String[] weekdays = getResources().getStringArray(R.array.Week_Weekdays);
+        String[] weekdays = getResources().getStringArray(R.array.Stat_Weekdays);
 
         String[] returnarray = new String[7];
 
@@ -402,6 +402,7 @@ public class Fragment_Relax_BarChart extends Fragment {
         @Override
         public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
             // write your logic here
+            if( value == 0.f) return "";
             return "" + value;
         }
     }

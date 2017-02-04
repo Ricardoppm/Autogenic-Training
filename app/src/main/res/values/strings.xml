@@ -33,6 +33,8 @@
         <item>Saturday</item>
     </string-array>
 
+
+
     <!-- Week Specific Text -->
     <string-array name="Week_Text">
         <item>I am completely calm</item>
@@ -94,6 +96,15 @@
         <item>W5</item>
         <item>W6</item>
         <item>W7</item>
+    </string-array>
+    <string-array name="Stat_Weekdays">
+        <item>Su.</item>
+        <item>Mo.</item>
+        <item>Tu.</item>
+        <item>We.</item>
+        <item>Th.</item>
+        <item>Fr.</item>
+        <item>Sa.</item>
     </string-array>
 
     <!-- Notification Server Strings-->

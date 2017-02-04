@@ -15,7 +15,8 @@
         android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_above="@+id/Statistics_WeekToggle_Relax"
-        android:layout_below="@+id/Statistics_Relax_Type"/>
+        android:layout_below="@+id/Statistics_Relax_Type"
+        android:layout_marginBottom="20dp" />
 
     <org.honorato.multistatetogglebutton.MultiStateToggleButton
         android:id="@+id/Statistics_WeekToggle_Relax"
