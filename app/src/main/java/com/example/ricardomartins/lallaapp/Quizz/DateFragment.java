@@ -1,4 +1,4 @@
-package com.example.ricardomartins.lallaapp.First_Time_Quizz;
+package com.example.ricardomartins.lallaapp.Quizz;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;

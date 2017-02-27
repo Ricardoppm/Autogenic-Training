@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:weightSum="1"
     android:focusableInTouchMode="true"
-    tools:context="com.example.ricardomartins.lallaapp.First_Time_Quizz.First_Time_Activity">
+    tools:context="com.example.ricardomartins.lallaapp.Quizz.First_Time_Activity">
 
 
     <TextView

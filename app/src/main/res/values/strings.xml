@@ -10,7 +10,11 @@
     <string name="Opt_MenuName">Options Menu</string>
     <string name="Opt_Notification">Notifications:</string>
     <string name="Opt_Language">Language:</string>
+    <string name="Opt_Language_EN">English</string>
+    <string name="Opt_Language_IT">Italian</string>
     <string name="Opt_Reset">Reset Application</string>
+    <string name="Opt_Dialog_Title">Reset Progress</string>
+    <string name="Opt_Dialog_Text">Are you sure you want to reset your progress?</string>
 
     <!-- Parameters to Add_exercise_Fragment -->
     <string name="relax">Relax Level</string>
@@ -32,8 +36,8 @@
         <item>Friday</item>
         <item>Saturday</item>
     </string-array>
-
-
+    <string name="Week_Dialog_Title">Delete entry</string>
+    <string name="Week_Dialog_Text">Are you sure you want to delete the entry?</string>
 
     <!-- Week Specific Text -->
     <string-array name="Week_Text">
@@ -73,6 +77,7 @@
     <string name="Start_ButtonStatus">Week Status</string>
     <string name="Start_ButtonProgress">Weekly Progress</string>
     <string name="Start_ButtonStatistics">Statistics</string>
+    <string name="Start_ButtonFinal">Final Results</string>
 
 
     <!-- Progress Activity-->
@@ -136,6 +141,8 @@
     <string name="Pref_Notification_1">Afternoon_Notification</string>
     <string name="Pref_Notification_2">Night_Notification</string>
     <string name="Pref_FirstTimeWeekDisplay">first_time_week</string>
+    <string name="title_activity_results_">Results_Activity</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

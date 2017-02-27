@@ -124,8 +124,8 @@ public class WeekStatus extends AppCompatActivity implements ExerciseFragment.On
         if( delete_record){
             Log.i("WeekACT", "User want to DELETE " + period + " of " + item.weekday + "- day " + day);
             new AlertDialog.Builder(WeekStatus.this)
-                    .setTitle("Delete entry")
-                    .setMessage("Are you sure you want to delete the entry?")
+                    .setTitle( getString(R.string.Week_Dialog_Title))
+                    .setMessage( getString(R.string.Week_Dialog_Text))
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             DeleteDBEntry(item,period);

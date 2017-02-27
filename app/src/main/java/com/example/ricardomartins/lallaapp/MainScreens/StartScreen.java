@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.ricardomartins.lallaapp.Quizz.Results_Activity;
 import com.example.ricardomartins.lallaapp.Statistics.Activity_Statistics;
 import com.example.ricardomartins.lallaapp.Pager_Activities.Activity_HelpPager;
 import com.example.ricardomartins.lallaapp.Week.Activity_Progress;
@@ -33,7 +34,7 @@ public class StartScreen extends AppCompatActivity {
     private SharedPreferences sharedPref;
 
     private TextView WelcomeText;
-    private Button week,add ,db, delete, progress, statistics;
+    private Button week,add ,db, delete, progress, statistics, results;
     private ImageButton help;
 
     private  DatabaseHelper dbHelper;
@@ -124,31 +125,32 @@ public class StartScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+        results = (Button) findViewById(R.id.Start_Final);
+        results.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),Results_Activity.class);
+                startActivity(i);
+            }
+        });
+
+        if( dateCalculator.getCurrentWeekIndex() >=7){
+            results.setVisibility(View.VISIBLE);
+        }
+        else{
+            results.setVisibility(View.VISIBLE);
+            Log.i(TAG, "Results Shoudl be hidden!");
+        }
+
     }
 
     private void ReadDB(){
         Log.i("DB", "reading db");
 
-        // Define a projection that specifies which columns from the database
-// you will actually use after this query.
-        String[] projection = {
-                DatabaseContract.Exercises._ID,
-                DatabaseContract.Exercises.COLUMN_DATE,
-                DatabaseContract.Exercises.COLUMN_PERIOD,
-                DatabaseContract.Exercises.COLUMN_PHYSICAL,
-                DatabaseContract.Exercises.COLUMN_RELAX,
-                DatabaseContract.Exercises.COLUMN_REMARK,
-                DatabaseContract.Exercises.COLUMN_DAYOFWEEK,
-                DatabaseContract.Exercises.COLUMN_WEEK
-        };
-
         Cursor  cursor = dbase.rawQuery("select * from " + DatabaseContract.Exercises.TABLE_NAME ,null);
 
-        List itemIds = new ArrayList<>();
         while(cursor.moveToNext()) {
-            long itemId = cursor.getLong(
-                    cursor.getColumnIndexOrThrow(DatabaseContract.Exercises._ID));
-            itemIds.add(itemId);
             StringBuilder date = new StringBuilder(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.Exercises.COLUMN_DATE)));
             int period = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.Exercises.COLUMN_PERIOD));
             StringBuilder phy = new StringBuilder(cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.Exercises.COLUMN_PHYSICAL)));

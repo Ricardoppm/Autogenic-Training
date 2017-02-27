@@ -10,10 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ricardomartins.lallaapp.First_Time_Quizz.First_Time_Activity;
+import com.example.ricardomartins.lallaapp.Quizz.First_Time_Activity;
 import com.example.ricardomartins.lallaapp.Notification.Service_Notification;
 import com.example.ricardomartins.lallaapp.Pager_Activities.InfoScreen;
 import com.example.ricardomartins.lallaapp.R;
+import com.squareup.leakcanary.LeakCanary;
 
 public class EntryScreen extends AppCompatActivity {
 
@@ -27,6 +28,13 @@ public class EntryScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry_screen);
+
+        if (LeakCanary.isInAnalyzerProcess(getApplication())) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(getApplication());
 
         sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
         first_time = sharedPref.getBoolean(getString(R.string.Pref_first_time_starting), true);
@@ -71,18 +79,18 @@ public class EntryScreen extends AppCompatActivity {
         if (!isMyServiceRunning()){
             Log.i("Entry", "Starting Service!");
 
-            SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
+           /* SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putBoolean(getString(R.string.Pref_Notification_0), true);
             editor.putBoolean(getString(R.string.Pref_Notification_1), true);
             editor.putBoolean(getString(R.string.Pref_Notification_2), true);
 
-            editor.commit();
+            editor.commit();*/
 
             Intent serviceIntent = new Intent(this, Service_Notification.class);
-            serviceIntent.putExtra(getString(R.string.Intent_Notification_0),true); //sharedPref.getBoolean(getString(R.string.Pref_Notification_0), false));
-            serviceIntent.putExtra(getString(R.string.Intent_Notification_1),true); //sharedPref.getBoolean(getString(R.string.Pref_Notification_1), false));
-            serviceIntent.putExtra(getString(R.string.Intent_Notification_2),false); //sharedPref.getBoolean(getString(R.string.Pref_Notification_2), false));
+            serviceIntent.putExtra(getString(R.string.Intent_Notification_0),sharedPref.getBoolean(getString(R.string.Pref_Notification_0), false));
+            serviceIntent.putExtra(getString(R.string.Intent_Notification_1),sharedPref.getBoolean(getString(R.string.Pref_Notification_1), false));
+            serviceIntent.putExtra(getString(R.string.Intent_Notification_2),sharedPref.getBoolean(getString(R.string.Pref_Notification_2), false));
             this.startService(serviceIntent);
         }
     }

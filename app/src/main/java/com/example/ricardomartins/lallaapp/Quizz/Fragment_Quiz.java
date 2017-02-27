@@ -1,10 +1,8 @@
-package com.example.ricardomartins.lallaapp.First_Time_Quizz;
+package com.example.ricardomartins.lallaapp.Quizz;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;

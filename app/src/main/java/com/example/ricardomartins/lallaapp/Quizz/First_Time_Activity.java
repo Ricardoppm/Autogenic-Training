@@ -1,4 +1,4 @@
-package com.example.ricardomartins.lallaapp.First_Time_Quizz;
+package com.example.ricardomartins.lallaapp.Quizz;
 
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
@@ -187,6 +187,7 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
             ContentValues values = new ContentValues();
             values.put(DatabaseContract.QuizAnswers.COLUMN_NB, i);
             values.put(DatabaseContract.QuizAnswers.COLUMN_ANSWER, answers[i]);
+            values.put(DatabaseContract.QuizAnswers.COLUMN_QUIZ, 1);
 
             Log.i(TAG, "Answer "+ (i+1) + " = " + answers[i]);
 

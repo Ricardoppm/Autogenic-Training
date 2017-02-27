@@ -8,7 +8,7 @@ import android.provider.BaseColumns;
 
 public final class DatabaseContract {
 
-    public static final  int    DATABASE_VERSION   = 3;
+    public static final  int    DATABASE_VERSION   = 6;
     public static final  String DATABASE_NAME      = "LauraApp.db";
     private static final String TEXT_TYPE          = " TEXT";
     private static final String INTEGER_TYPE       = " INTEGER";
@@ -53,6 +53,7 @@ public final class DatabaseContract {
         public static final String TABLE_NAME = "QuizAnswers";
         public static final String COLUMN_NB = "QuestionNb";
         public static final String COLUMN_ANSWER = "Answer";
+        public static final String COLUMN_QUIZ = "Quiz";
 
 
         public static final String SQL_CREATE_ENTRIES =
@@ -60,10 +61,11 @@ public final class DatabaseContract {
                         TABLE_NAME + " (" +
                         _ID + " INTEGER PRIMARY KEY," +
                         COLUMN_NB + INTEGER_TYPE + COMMA_SEP +
-                        COLUMN_ANSWER + INTEGER_TYPE + " )";
+                        COLUMN_ANSWER + INTEGER_TYPE + COMMA_SEP +
+                        COLUMN_QUIZ + INTEGER_TYPE + " )";
 
         public static final String SQL_DELETE_ENTRIES =
-                "DROP TABLE IF EXISTS " + Exercises.TABLE_NAME;
+                "DROP TABLE IF EXISTS " + QuizAnswers.TABLE_NAME;
     }
 
 

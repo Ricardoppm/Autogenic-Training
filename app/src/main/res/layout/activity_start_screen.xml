@@ -88,14 +88,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Start_Progress"
-        android:layout_marginLeft="6dp"
-        android:layout_marginStart="6dp"
         android:id="@+id/Start_Statistics"
         android:layout_below="@+id/Start_Progress"
         android:layout_alignRight="@+id/Start_Progress"
         android:background="@color/Toggle_off"
         android:textSize="20sp"
         android:textStyle="normal|bold" />
+
+    <Button
+        android:text="@string/Start_ButtonFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Start_Progress"
+        android:id="@+id/Start_Final"
+        android:layout_below="@+id/Start_Statistics"
+        android:layout_alignRight="@+id/Start_Progress"
+        android:background="@color/Toggle_off"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible" />
 
     <ImageButton
         android:layout_width="wrap_content"
