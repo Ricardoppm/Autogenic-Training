@@ -57,6 +57,8 @@ public class EntryScreen extends AppCompatActivity {
                 }
             }
         });
+        if(first_time)
+            start.setText(getString(R.string.Entry_Start));
 
         info = (Button) findViewById(R.id.Binfo);
         info.setOnClickListener(new View.OnClickListener(){
@@ -78,14 +80,6 @@ public class EntryScreen extends AppCompatActivity {
 
         if (!isMyServiceRunning()){
             Log.i("Entry", "Starting Service!");
-
-           /* SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putBoolean(getString(R.string.Pref_Notification_0), true);
-            editor.putBoolean(getString(R.string.Pref_Notification_1), true);
-            editor.putBoolean(getString(R.string.Pref_Notification_2), true);
-
-            editor.commit();*/
 
             Intent serviceIntent = new Intent(this, Service_Notification.class);
             serviceIntent.putExtra(getString(R.string.Intent_Notification_0),sharedPref.getBoolean(getString(R.string.Pref_Notification_0), false));

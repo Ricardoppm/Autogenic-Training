@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
@@ -56,6 +57,9 @@ public class WeekStatus extends AppCompatActivity implements ExerciseFragment.On
             String[] week_text = getResources().getStringArray(R.array.Week_Text);
 
 
+            int[] colors = getResources().getIntArray(R.array.Week_Colors);
+            LinearLayout layout = (LinearLayout) findViewById(R.id.Week_LAY);
+            layout.setBackgroundColor(colors[weeknumber]);
             phrase.setText( week_text[weeknumber]);
 
             Log.i("WeekAct", "Waiting 5!");

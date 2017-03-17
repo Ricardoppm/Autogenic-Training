@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/Page_Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:padding="32dp"
+        android:text="COS’É IL TRAINING AUTOGENO E COME NASCE PSYCHAPPTA?"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del '900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Page_Headline"
+        android:layout_alignParentEnd="false"
+        android:id="@+id/Page_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:textAlignment="textStart"
+        android:textColor="?android:attr/textColorPrimary"
+        android:padding="32dp" />
+
+</RelativeLayout>

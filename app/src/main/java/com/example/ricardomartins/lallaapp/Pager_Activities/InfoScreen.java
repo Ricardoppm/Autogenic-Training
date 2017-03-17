@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +20,7 @@ public class InfoScreen extends FragmentActivity {
     AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 
     ViewPager mViewPager;
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +53,9 @@ public class InfoScreen extends FragmentActivity {
             switch (i) {
                 default:
                     // The other sections of the app are dummy placeholders.
-                    Fragment fragment = new DummySectionFragment();
+                    Fragment fragment = new InfoSection();
                     Bundle args = new Bundle();
-                    args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i + 1);
+                    args.putInt(InfoSection.ARG_SECTION_NUMBER, i);
                     fragment.setArguments(args);
                     return fragment;
             }
@@ -76,16 +76,22 @@ public class InfoScreen extends FragmentActivity {
     /**
      * A dummy fragment representing a section of the app, but that simply displays dummy text.
      */
-    public static class DummySectionFragment extends Fragment {
+    public static class InfoSection extends Fragment {
 
         public static final String ARG_SECTION_NUMBER = "section_number";
+
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_page, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_whatis, container, false);
             Bundle args = getArguments();
-            ((TextView) rootView.findViewById(R.id.Page_Text)).setText( "This is page " + args.getInt(ARG_SECTION_NUMBER) + " of Info!");
+            int index = args.getInt(ARG_SECTION_NUMBER);
+
+            String [] headlines  = getResources().getStringArray(R.array.Info_Headline);
+            String[] texts = getResources().getStringArray(R.array.Info_Text);
+            ((TextView) rootView.findViewById(R.id.Page_Headline)).setText( headlines[index] );
+            ((TextView) rootView.findViewById(R.id.Page_text)).setText( texts[index]);
             return rootView;
         }
     }

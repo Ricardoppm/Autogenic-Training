@@ -69,6 +69,9 @@ public class StartScreen extends AppCompatActivity {
                 DateCalculator.Week myweek = dateCalculator.getCurrentWeek();
                 Log.i("CALCULATOR RESULT!", "Display Values: " + myweek.getDay() + " _ " + myweek.getMonth() + " _ " + myweek.getYear() + " _ " + myweek.getWeek_day() + " _ " + myweek.getElapsed_days() + " _ " + myweek.getWeek_number());
 
+                if( myweek.getWeek_number()>6)
+                    myweek = dateCalculator.getWeek(6);
+
                 Intent i = new Intent(getBaseContext(),WeekStatus.class);
                 i.putExtra(getString(R.string.Intent_Day), myweek.getDay());
                 i.putExtra(getString(R.string.Intent_Month), myweek.getMonth());
@@ -134,6 +137,11 @@ public class StartScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        if( !sharedPref.getBoolean(getString(R.string.Pref_FinishedProgram), false))
+            results.setText(getString(R.string.Start_ButtonFinal));
+        else
+            results.setText(getString(R.string.Start_Results));
+
 
         if( dateCalculator.getCurrentWeekIndex() >=7){
             results.setVisibility(View.VISIBLE);

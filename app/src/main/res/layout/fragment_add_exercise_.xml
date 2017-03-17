@@ -96,13 +96,14 @@
 
 
         <SeekBar
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:max="10"
             android:progress="5"
             android:id="@+id/relax"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            style="@android:style/Widget.Material.SeekBar.Discrete"
+            android:thumb="@drawable/apptheme_scrubber_control_normal_holo" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,7 +136,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_weight="0.075"
-        android:background="@drawable/rectangle_inactive">
+        android:background="@drawable/rectangle_inactive"
+        android:layout_gravity="center">
 
         <EditText
             android:layout_width="wrap_content"
@@ -144,10 +146,15 @@
             android:ems="10"
             android:id="@+id/physical"
             android:layout_weight="1"
-            android:text="ola"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:textColorLink="@android:color/transparent"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:hint="@string/Add_Optional"
+            android:textAlignment="viewStart" />
 
 
     </LinearLayout>
@@ -190,7 +197,10 @@
             android:layout_weight="1"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:layout_gravity="center"
+            android:hint="@string/Add_Optional" />
 
 
     </LinearLayout>
@@ -203,12 +213,13 @@
 
         <Button
             android:text="save"
-            android:layout_width="217dp"
             android:layout_height="wrap_content"
             android:id="@+id/save"
             android:elevation="1dp"
             android:layout_marginTop="15dp"
-            android:layout_gravity="center_vertical|center_horizontal" />
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_width="120dp"
+            android:textColor="@color/Toggle_off" />
 
     </FrameLayout>
 

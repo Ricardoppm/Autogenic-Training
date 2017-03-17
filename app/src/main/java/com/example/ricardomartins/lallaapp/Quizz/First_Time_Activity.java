@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
@@ -62,22 +63,11 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
 
         answers = new int[ getResources().getStringArray(R.array.Quiz_Questions).length];
 
-        NameInput.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-
-                if(hasFocus && !HasTouchedName){
-                    NameInput.setText("");
-                    HasTouchedName=true;
-                }
-            }
-        });
-
         SaveButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 IsInputValid();
                 if(HasDate && HasName){
-                    Toast.makeText(First_Time_Activity.this, "Proceed", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(First_Time_Activity.this, "Proceed", Toast.LENGTH_LONG).show();
                     SaveValuesContinue();
                 }else{
                     Log.i(TAG, "Can't Proceed - D= " +HasDate +" and N= "+HasName);
@@ -149,18 +139,25 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         editor.commit();
 
 
+        setContentView(R.layout.fragment_information);
+
+        Button start = (Button) findViewById(R.id.Info_Go);
+        start.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                setContentView(R.layout.fragment_simple_layout);
 
 
-        setContentView(R.layout.fragment_simple_layout);
+                fm = getSupportFragmentManager();
 
-
-        fm = getSupportFragmentManager();
-
-        fm.beginTransaction()
-                .add(R.id.Simple_Frame_Layout, new Fragment_Quiz(), "week_frag")
-                .commit();
-        fm.executePendingTransactions();
-
+                fm.beginTransaction()
+                        .add(R.id.Simple_Frame_Layout, new Fragment_Quiz(), "week_frag")
+                        .commit();
+                fm.executePendingTransactions();
+            }
+        });
+        start.setText(getString(R.string.Quiz_Init_Bt));
+        TextView text = (TextView) findViewById(R.id.Info_text);
+        text.setText(String.format(getResources().getString(R.string.Quiz_Init_Text), NameInput.getText()));
     }
 
     public void onAnswerSelected(int id, int answer){
@@ -205,7 +202,17 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         editor.putBoolean(getString(R.string.Pref_first_time_starting),false);
         editor.commit();
 
-        Intent i = new Intent(getBaseContext(),StartScreen.class);
-        startActivity(i);
+        setContentView(R.layout.fragment_information);
+
+        Button start = (Button) findViewById(R.id.Info_Go);
+        start.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),StartScreen.class);
+                startActivity(i);
+            }
+        });
+        start.setText(getString(R.string.Quiz_Final_Bt));
+        TextView text = (TextView) findViewById(R.id.Info_text);
+        text.setText(getString(R.string.Quiz_Final_Text));
     }
 }

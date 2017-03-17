@@ -49,8 +49,8 @@ public class Fragment_Quiz extends Fragment {
         view =  inflater.inflate(R.layout.fragment_quiz, container, false);
 
         String Question_Number = String.format(getResources().getString(R.string.Quiz_Number), Numeration);
-        Quiz_QuestionNb = (TextView) view.findViewById(R.id.Quiz_QuestionNb);
-        Quiz_QuestionNb.setText(Question_Number);
+        //Quiz_QuestionNb = (TextView) view.findViewById(R.id.Quiz_QuestionNb);
+        //Quiz_QuestionNb.setText(Question_Number);
 
         Questions = getResources().getStringArray(R.array.Quiz_Questions);
         Answers = getResources().getStringArray(R.array.Quiz_Answers);
@@ -63,11 +63,6 @@ public class Fragment_Quiz extends Fragment {
         Button_Next = (Button) view.findViewById(R.id.Quiz_NextButton);
         Button_Next.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                if(!PlayingQuiz){
-                    Log.i("Quiz", "Finished get me out of here");
-                    mListener.onAnswerSelected(-1,0); // id=-1 indicates test is over
-
-                }else{
                     if(Current_Answer!=0){
                         Log.i("Quiz", "Got Answer = " + Answers[Current_Answer-1]);
                         mListener.onAnswerSelected(Numeration, Current_Answer );
@@ -75,7 +70,6 @@ public class Fragment_Quiz extends Fragment {
                     }else{
                         Log.i("Quiz", "No answer yet");
                     }
-                }
             }
         });
 
@@ -136,12 +130,12 @@ public class Fragment_Quiz extends Fragment {
     private void DisplayNextQuestion(){
         if(Numeration >= Questions.length){
             Log.i("Quiz", "No more Questions Thanks");
-            PlayingQuiz=false;
-            DisplayFinalMessage();
+            Log.i("Quiz", "Finished get me out of here");
+            mListener.onAnswerSelected(-1,0); // id=-1 indicates test is over
         }else {
             Numeration++;
             String Question_Number = String.format(getResources().getString(R.string.Quiz_Number), Numeration);
-            Quiz_QuestionNb.setText(Question_Number);
+            //Quiz_QuestionNb.setText(Question_Number);
             Quiz_QuestionText.setText(Questions[Numeration - 1]);
             radioGroup.clearCheck();
             Current_Answer=0;

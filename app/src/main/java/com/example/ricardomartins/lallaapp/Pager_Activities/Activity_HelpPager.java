@@ -81,7 +81,7 @@ public class Activity_HelpPager extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_page, container, false);
             Bundle args = getArguments();
-            ((TextView) rootView.findViewById(R.id.Page_Text)).setText( "This is page " + args.getInt(ARG_SECTION_NUMBER) + " of Info!");
+            ((TextView) rootView.findViewById(R.id.Page_Headline)).setText( "This is page " + args.getInt(ARG_SECTION_NUMBER) + " of Info!");
             return rootView;
         }
     }

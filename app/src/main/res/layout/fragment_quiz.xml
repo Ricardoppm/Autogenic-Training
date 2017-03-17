@@ -10,56 +10,58 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Quiz_QuestionNb"
-        android:text="Question 1:"
-        android:layout_weight="0.3"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="?android:attr/textColorHint"
-        android:layout_margin="10dp"
-        android:gravity="center_vertical" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/Quiz_QuestionText"
         android:text="How do you feel about this UI?"
-        android:layout_weight="0.3"
+        android:layout_weight="0.4"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="?android:attr/textColorHint"
-        android:layout_margin="10dp" />
+        android:textColor="?android:attr/textColorPrimary"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textAlignment="center" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/Quiz_Radio_Group"
-        android:layout_weight="0.2"
+        android:layout_weight="0.4"
         android:layout_margin="10dp">
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Quiz_Answer1" />
+            android:id="@+id/Quiz_Answer1"
+            android:textSize="20sp"
+            style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Quiz_Answer2"/>
+            android:id="@+id/Quiz_Answer2"
+            android:textSize="20sp"
+            style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Quiz_Answer3"/>
+            android:id="@+id/Quiz_Answer3"
+            android:textSize="20sp"
+            style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Quiz_Answer4"/>
+            android:id="@+id/Quiz_Answer4"
+            android:textSize="20sp"
+            style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Quiz_Answer5"/>
+            android:id="@+id/Quiz_Answer5"
+            android:textSize="20sp"
+            style="@style/RadioButtonAppTheme" />
     </RadioGroup>
 
     <Button
@@ -69,5 +71,9 @@
         android:id="@+id/Quiz_NextButton"
         android:layout_weight="0.05"
         android:layout_marginRight="125dp"
-        android:layout_marginLeft="125dp" />
+        android:layout_marginLeft="125dp"
+        android:background="@color/Toggle_on"
+        android:textColor="@color/Toggle_off"
+        android:textSize="20sp"
+        android:textStyle="normal|bold" />
 </LinearLayout>

@@ -54,15 +54,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="Name"
                 android:ems="10"
-                android:background="@drawable/rectangle_yellow"
+                android:background="@drawable/rectangle_inactive"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:padding="5dp"
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/ND_nameinput_"
-                android:maxLength="20" />
+                android:maxLength="20"
+                android:hint="@string/Name_Name"
+                android:singleLine="true" />
 
 
         </FrameLayout>
@@ -99,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date"
                 android:ems="10"
-                android:background="@drawable/rectangle_yellow"
+                android:background="@drawable/rectangle_inactive"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:padding="5dp"
@@ -124,6 +125,7 @@
             android:id="@+id/ND_button"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="0.1"
-            android:background="@color/cardview_shadow_start_color" />
+            android:background="@color/Toggle_on"
+            android:textColor="@color/Toggle_off" />
     </FrameLayout>
 </LinearLayout>

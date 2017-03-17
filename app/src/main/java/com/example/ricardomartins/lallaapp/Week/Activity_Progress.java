@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.ricardomartins.lallaapp.DateCalculator.DateCalculator;
@@ -19,6 +20,8 @@ public class Activity_Progress extends AppCompatActivity {
 
     private DateCalculator dateCalculator;
     private int CurrentWeek, ElapsedDays;
+    private SharedPreferences sharedPref;
+    private String[] weekText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,47 +29,54 @@ public class Activity_Progress extends AppCompatActivity {
         setContentView(R.layout.activity_progress);
 
 
-        SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName), Context.MODE_PRIVATE);
+        sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName), Context.MODE_PRIVATE);
         dateCalculator = new DateCalculator(
                 sharedPref.getInt(getString(R.string.Pref_day), -1),
                 sharedPref.getInt(getString(R.string.Pref_month), -1),
                 sharedPref.getInt(getString(R.string.Pref_year), -1));
 
+        weekText = getResources().getStringArray(R.array.Progress_WeekTheme);
         CurrentWeek = dateCalculator.getCurrentWeekIndex();
         setWeekVisibility();
     }
 
     private void setWeekVisibility(){
-        ImageButton Cur_Button;
+
+        int[] color = getResources().getIntArray(R.array.Week_Colors);
+        Button Cur_Button;
         for (int i=0; i<8 ; i++){
             switch (i){
                 case 0:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek1);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek1);
                     break;
                 case 1:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek2);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek2);
                     break;
                 case 2:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek3);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek3);
                     break;
                 case 3:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek4);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek4);
                     break;
                 case 4:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek5);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek5);
                     break;
                 case 5:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek6);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek6);
                     break;
                 case 6:
-                    Cur_Button = (ImageButton) findViewById(R.id.Progress_BtWeek7);
+                    Cur_Button = (Button) findViewById(R.id.Progress_BtWeek7);
                     break;
                 default:
                     Log.i(TAG, "Error setting visibility");
                     return;
             }
-            if(i>CurrentWeek) Cur_Button.setImageResource(R.drawable.circle_red);
-            else Cur_Button.setImageResource(R.drawable.circle);
+            Cur_Button.setText(String.format(getResources().getString(R.string.Progress_Week), i+1));
+            if(i<=CurrentWeek) {
+                Cur_Button.setBackgroundColor(color[i]);
+            }else{
+                Cur_Button.setEnabled(false);
+            }
         }
 
     }

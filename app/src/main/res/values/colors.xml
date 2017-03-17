@@ -25,6 +25,14 @@
     <color name="Toggle_off">#ffc800</color>
     <color name="Entry_Background">#2dedc4</color>
     <color name="Add_bg">#ededed</color>
+    <color name="Week_hide">#d9d9d9</color>
+    <color name="Week_4_Block">#64bb0000</color>
+    <color name="Week_3_Block">#64fc7f18</color>
+    <color name="Week_5_Block">#6478c51a</color>
+    <color name="Week_6_Block">#64ffdd00</color>
+    <color name="Week_7_Block">#645fc4e3</color>
+    <color name="Week_2_Block">#644e230f</color>
+    <color name="Week_1_Block">#64003cb5</color>
 
     <array name="Week_Colors">
         <item>@color/Week_1</item>

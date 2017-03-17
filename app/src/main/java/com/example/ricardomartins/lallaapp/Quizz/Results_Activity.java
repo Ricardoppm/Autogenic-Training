@@ -21,7 +21,7 @@ import com.example.ricardomartins.lallaapp.Database.DatabaseHelper;
 import com.example.ricardomartins.lallaapp.MainScreens.StartScreen;
 import com.example.ricardomartins.lallaapp.R;
 
-public class Results_Activity extends FragmentActivity implements  Fragment_Quiz.OnFragmentInteractionListener{
+public class Results_Activity extends FragmentActivity implements  Fragment_Quiz.OnFragmentInteractionListener, QuestionFragment.OnQuestionFragmentInteractionListener{
 
     private static final String TAG = "Results";
 
@@ -32,16 +32,45 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_simple_layout);
 
-        answers = new int[ getResources().getStringArray(R.array.Quiz_Questions).length];
+        SharedPreferences sharedPreferences = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
+        if( !sharedPreferences.getBoolean(getString(R.string.Pref_FinishedProgram), false)){
+            setContentView(R.layout.fragment_simple_layout);
 
-        fm = getSupportFragmentManager();
+            answers = new int[ getResources().getStringArray(R.array.Quiz_Questions).length];
 
-        fm.beginTransaction()
-                .add(R.id.Simple_Frame_Layout, new Fragment_Quiz(), "week_frag")
-                .commit();
-        fm.executePendingTransactions();
+            fm = getSupportFragmentManager();
+
+            fm.beginTransaction()
+                    .add(R.id.Simple_Frame_Layout, new Fragment_Quiz(), "week_frag")
+                    .commit();
+            fm.executePendingTransactions();
+        }
+        else{
+
+            DatabaseHelper dbHelper = new DatabaseHelper(this);
+            db = dbHelper.getWritableDatabase();
+
+            Cursor cursor = db.rawQuery("select * from " + DatabaseContract.QuizAnswers.TABLE_NAME ,null);
+
+            while(cursor.moveToNext()) {
+                int quiz = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_QUIZ));
+                int answer = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_ANSWER));
+                int number = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_NB));
+
+                Log.i("DBReader", "Question " + number + " of quiz  " +  quiz + " --> " + answer);
+            }
+
+            setContentView(R.layout.activity_results);
+
+            fm = getSupportFragmentManager();
+
+            fm.beginTransaction()
+                    .add(R.id.Results_List, new QuestionFragment(), "Quest_frag")
+                    .commit();
+            fm.executePendingTransactions();
+
+        }
     }
 
 
@@ -84,10 +113,17 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
     private void UpdatePrefAndContinue(){
         SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(getString(R.string.Pref_first_time_starting),false);
+        editor.putBoolean(getString(R.string.Pref_FinishedProgram),true);
         editor.commit();
 
         setContentView(R.layout.activity_results);
+
+        fm = getSupportFragmentManager();
+
+        fm.beginTransaction()
+                .add(R.id.Results_List, new QuestionFragment(), "Quest_frag")
+                .commit();
+        fm.executePendingTransactions();
 
         Cursor cursor = db.rawQuery("select * from " + DatabaseContract.QuizAnswers.TABLE_NAME ,null);
 
@@ -98,6 +134,8 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
 
             Log.i("DBReader", "Question " + number + " of quiz  " +  quiz + " --> " + answer);
         }
+    }
 
+    public void onQuestionFragmentInteraction(QuestionContent.Question item){
     }
 }

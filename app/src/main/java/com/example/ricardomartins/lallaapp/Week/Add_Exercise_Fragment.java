@@ -218,7 +218,6 @@ public class Add_Exercise_Fragment extends Fragment implements DatePickerDialog.
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         void onExerciseAdded();
     }
 }

@@ -20,7 +20,8 @@
         android:textStyle="normal|bold"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="?android:attr/textColorPrimary" />
 
     <TextView
         android:text="@string/Opt_Notification"
@@ -30,7 +31,8 @@
         android:textSize="36sp"
         android:textStyle="normal|bold"
         android:layout_below="@id/Opt_Text"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:textColor="?android:attr/textColorPrimary" />
 
     <Button
         android:text="@string/Opt_Reset"
@@ -38,8 +40,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/Opt_Reset_Button"
         android:layout_marginTop="35dp"
-        android:layout_below="@+id/Opt_English"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/Opt_IT"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/Toggle_off" />
 
     <CheckBox
         android:text="@string/Add_Morning"
@@ -76,7 +79,8 @@
         android:textSize="36sp"
         android:textStyle="normal|bold"
         android:layout_below="@+id/Opt_CheckNight"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:textColor="?android:attr/textColorPrimary" />
 
 
     <ImageView
@@ -96,23 +100,73 @@
         android:gravity="center"
         android:id="@+id/Opt_Credits" />
 
-    <Button
-        android:text="@string/Opt_Language_EN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Opt_English"
-        android:layout_below="@+id/Opt_Language"
-        android:layout_centerHorizontal="false"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_marginRight="50dp" />
+    <LinearLayout
+        android:id="@+id/Opt_UK"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@id/Opt_Language"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
 
-    <Button
-        android:text="@string/Opt_Language_IT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Opt_Italian"
-        android:layout_below="@+id/Opt_Language"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="false"
-        android:layout_toRightOf="@id/Opt_English" />
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Opt_English"
+            android:background="@drawable/uk"
+            android:layout_alignWithParentIfMissing="false"
+            android:scaleType="fitXY"
+            android:layout_weight="0.8"
+            android:layout_margin="2dp" />
+
+        <TextView
+            android:text="@string/Opt_Language_EN"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Opt_UK_Text"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="24sp"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Opt_IT"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_below="@id/Opt_UK"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Opt_Italian"
+            android:background="@drawable/it"
+            android:layout_alignWithParentIfMissing="false"
+            android:scaleType="fitXY"
+            android:layout_weight="0.8"
+            android:layout_margin="2dp" />
+
+        <TextView
+            android:text="@string/Opt_Language_IT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Opt_IT_Text"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="24sp"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp" />
+    </LinearLayout>
+
+
+
+
+
+
 </RelativeLayout>

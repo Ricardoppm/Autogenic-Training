@@ -25,11 +25,10 @@
         android:layout_weight="0.6"
         android:gravity="center_vertical"
         android:textStyle="normal|bold"
-        android:fontFamily="sans-serif"
         android:lines="2" />
 
     <Button
-        android:text="@string/E_B_1"
+        android:text="@string/Entry_Practice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Bstart"
@@ -42,7 +41,7 @@
         android:layout_marginRight="10dp" />
 
     <Button
-        android:text="@string/E_B_2"
+        android:text="@string/Entry_Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Binfo"
@@ -52,7 +51,7 @@
         android:layout_margin="10dp" />
 
     <Button
-        android:text="@string/E_B_3"
+        android:text="@string/Entry_Opt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Bopt"

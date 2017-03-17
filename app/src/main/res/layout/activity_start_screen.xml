@@ -66,7 +66,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_centerHorizontal="true"
         android:textStyle="normal|bold"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="60dp" />
 
     <Button
         android:text="@string/Start_ButtonProgress"
@@ -81,33 +81,38 @@
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
         android:textSize="20sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:layout_alignLeft="@+id/Start_Statistics"
+        android:layout_alignRight="@+id/Start_Statistics" />
 
     <Button
         android:text="@string/Start_ButtonStatistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Start_Progress"
         android:id="@+id/Start_Statistics"
         android:layout_below="@+id/Start_Progress"
-        android:layout_alignRight="@+id/Start_Progress"
         android:background="@color/Toggle_off"
         android:textSize="20sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignRight="@+id/Start_Final"
+        android:layout_alignLeft="@+id/Start_Final" />
 
     <Button
         android:text="@string/Start_ButtonFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Start_Progress"
         android:id="@+id/Start_Final"
         android:layout_below="@+id/Start_Statistics"
-        android:layout_alignRight="@+id/Start_Progress"
         android:background="@color/Toggle_off"
         android:textSize="20sp"
         android:textStyle="normal|bold"
         android:layout_marginTop="20dp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -124,7 +129,8 @@
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
 
     <TextView
         android:text="Date"

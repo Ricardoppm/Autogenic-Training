@@ -13,54 +13,70 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:weightSum="1">
-        <ImageButton
+        <Button
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/progress_week4"
             android:id="@+id/Progress_BtWeek1"
             android:layout_margin="10dp"
             android:onClick="ButtonHandling"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:layout_weight="0.5"
-            android:layout_width="0dp" />
+            android:layout_width="0dp"
+            android:text="Week 1"
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:background="@color/Week_1_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
 
-        <ImageButton
+        <Button
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/progress_week4"
+            android:text="Week 2"
             android:id="@+id/Progress_BtWeek2"
             android:layout_margin="10dp"
             android:onClick="ButtonHandling"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:layout_weight="0.5"
-            android:layout_width="0dp" />
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:layout_width="0dp"
+            android:background="@color/Week_2_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
     </TableRow>
 
     <TableRow android:layout_weight="1"
         android:orientation="vertical"
         android:weightSum="2">
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/progress_week4"
             android:layout_margin="10dp"
+            android:text="Week 3"
             android:id="@+id/Progress_BtWeek3"
             android:onClick="ButtonHandling"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_weight="1" />
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="1"
+            android:background="@color/Week_3_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/progress_week4"
             android:layout_margin="10dp"
+            android:text="Week 4"
             android:id="@+id/Progress_BtWeek4"
             android:onClick="ButtonHandling"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_weight="1" />
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="1"
+            android:background="@color/Week_4_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
     </TableRow>
 
     <TableRow android:layout_weight="1"
@@ -68,27 +84,35 @@
         android:weightSum="2">
 
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/progress_week4"
+            android:text="Week 5"
             android:layout_margin="10dp"
             android:id="@+id/Progress_BtWeek5"
             android:onClick="ButtonHandling"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_weight="1" />
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="1"
+            android:background="@color/Week_5_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
 
-        <ImageButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/progress_week4"
+            android:text="Week 6"
             android:layout_margin="10dp"
             android:id="@+id/Progress_BtWeek6"
             android:onClick="ButtonHandling"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
-            android:layout_weight="1" />
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="1"
+            android:background="@color/Week_6_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
     </TableRow>
 
     <TableRow android:layout_weight="1"
@@ -96,9 +120,9 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <ImageButton
+        <Button
             android:layout_width="0dp"
-            app:srcCompat="@drawable/progress_week4"
+            android:text="Week 7"
             android:layout_margin="10dp"
             android:id="@+id/Progress_BtWeek7"
             android:onClick="ButtonHandling"
@@ -106,7 +130,11 @@
             android:adjustViewBounds="true"
             android:layout_height="match_parent"
             android:baselineAlignBottom="false"
-            android:layout_weight="0.5" />
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.5"
+            android:background="@color/Week_7_Block"
+            android:textColor="?android:attr/textColorPrimaryInverse" />
 
     </TableRow>
 </TableLayout>

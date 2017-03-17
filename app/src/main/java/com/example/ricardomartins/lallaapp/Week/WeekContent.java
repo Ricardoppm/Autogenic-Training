@@ -22,9 +22,6 @@ public class WeekContent {
      */
 //    public static final Map<String, Day> ITEM_MAP = new HashMap<String, Day>();
 
-    private static final int COUNT = 7;
-
-
 
     public static void addItem(Day item) {
         ITEMS.add(item);

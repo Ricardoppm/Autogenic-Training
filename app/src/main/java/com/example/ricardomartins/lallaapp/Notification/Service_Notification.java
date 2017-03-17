@@ -123,8 +123,10 @@ public class Service_Notification extends Service {
 
         @Override
         protected Void doInBackground(Void... params) {
-            if(isNotificationNow()) showNotification();
-            setAlarm();
+            if( Bmorning || BAnoon || BNight) {
+                if (isNotificationNow()) showNotification();
+                setAlarm();
+            }
             return null;
         }
 
@@ -193,12 +195,12 @@ public class Service_Notification extends Service {
             int[] hours = new int[] {6,6,12};
             if( Bmorning){
                 notificationOn[0]=1;    // morning allarm is active
-            }else if (BAnoon){
+            }
+            if (BAnoon){
                 notificationOn[1]=1;    // noon allarm is active
-            }else if (BNight){
+            }
+            if (BNight){
                 notificationOn[2]=1;    // night allarm is active
-            }else{
-                return false;
             }
             int j, i;
             for( i = CurrentPeriod, j=0; j<3; j++, i=(i+1)%3 ) {
@@ -291,6 +293,9 @@ public class Service_Notification extends Service {
 
             alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (next.getTimeInMillis()-System.currentTimeMillis()) , pendingIntent);
             System.out.println("Time Total ----- "+ System.currentTimeMillis() + (next.getTimeInMillis()-System.currentTimeMillis()) );
+
+            next.setTimeInMillis( System.currentTimeMillis() + (next.getTimeInMillis()-System.currentTimeMillis()));
+            System.out.println("Allarm will set at "+ next.getTime() );
         }
     }
 
