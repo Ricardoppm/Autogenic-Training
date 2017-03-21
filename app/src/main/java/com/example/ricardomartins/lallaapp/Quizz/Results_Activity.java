@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,8 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
     private int[] answers;
     FragmentManager fm;
     SQLiteDatabase db;
+    private Boolean isQuizActive=false;
+    private Fragment_Quiz QuizFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +41,11 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
             setContentView(R.layout.fragment_simple_layout);
 
             answers = new int[ getResources().getStringArray(R.array.Quiz_Questions).length];
-
+            isQuizActive = true;
             fm = getSupportFragmentManager();
 
             fm.beginTransaction()
-                    .add(R.id.Simple_Frame_Layout, new Fragment_Quiz(), "week_frag")
+                    .add(R.id.Simple_Frame_Layout, (QuizFrag = new Fragment_Quiz()), "week_frag")
                     .commit();
             fm.executePendingTransactions();
         }
@@ -75,6 +78,11 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
 
 
     public void onAnswerSelected(int id, int answer){
+        if( id==-2){
+            Log.i(TAG,"Back Pressed during Quiz");
+            finish();
+        }
+        else
         if(id==-1){
             Log.i(TAG,"Test over, adding answers to db");
             AddToAnswersDB();
@@ -116,6 +124,8 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
         editor.putBoolean(getString(R.string.Pref_FinishedProgram),true);
         editor.commit();
 
+        isQuizActive = false;
+
         setContentView(R.layout.activity_results);
 
         fm = getSupportFragmentManager();
@@ -134,6 +144,16 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
 
             Log.i("DBReader", "Question " + number + " of quiz  " +  quiz + " --> " + answer);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if( isQuizActive){
+            QuizFrag.BackButtonPressed();
+        }
+        else
+            super.onBackPressed();
+
     }
 
     public void onQuestionFragmentInteraction(QuestionContent.Question item){

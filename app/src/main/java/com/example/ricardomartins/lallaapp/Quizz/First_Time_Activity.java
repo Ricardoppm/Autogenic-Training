@@ -1,5 +1,6 @@
 package com.example.ricardomartins.lallaapp.Quizz;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -40,10 +41,12 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
 
     private Boolean HasDate=false;
     private Boolean HasName=false;
-    private Boolean HasTouchedName=false;
 
+    private Boolean isCompleted=false;
+    private Boolean hasStartedQuiz=false;
     private int[] answers;
 
+    private Fragment_Quiz QuizFrag;
     FragmentManager fm;
 
     private long MilisecsInDay = 1000*60*60*24;
@@ -138,6 +141,10 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         editor.putInt(getString(R.string.Pref_FirstTimeWeekDisplay), dateCalculator.getCurrentWeekIndex()-1);
         editor.commit();
 
+        showTestStarter();
+    }
+
+    private void showTestStarter(){
 
         setContentView(R.layout.fragment_information);
 
@@ -146,11 +153,12 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
             public void onClick(View v) {
                 setContentView(R.layout.fragment_simple_layout);
 
+                hasStartedQuiz = true;
 
                 fm = getSupportFragmentManager();
 
                 fm.beginTransaction()
-                        .add(R.id.Simple_Frame_Layout, new Fragment_Quiz(), "week_frag")
+                        .add(R.id.Simple_Frame_Layout, (QuizFrag=new Fragment_Quiz()), "week_frag")
                         .commit();
                 fm.executePendingTransactions();
             }
@@ -161,19 +169,23 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
     }
 
     public void onAnswerSelected(int id, int answer){
-        if(id==-1){
+        if( id==-2){
+            Log.i(TAG,"Back Pressed during Quiz");
+            showTestStarter();
+            hasStartedQuiz=false;
+        }
+        else if(id==-1){
             Log.i(TAG,"Test over, adding answers to db");
-            AddToAnswersDB();
+            AddToAnswers();
             UpdatePrefAndContinue();
-        }else{
+        }
+        else{
             answers[id-1] = answer;
         }
     }
 
-    private void AddToAnswersDB(){
+    private void AddToAnswers(){
         Log.i(TAG, "Adding answers");
-        for (int i=0 ; i < answers.length ;  i++){
-        }
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -196,6 +208,16 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if( isCompleted){
+            Intent returnIntent = new Intent();
+            setResult(Activity.RESULT_OK, returnIntent);
+            finish();
+        }
+    }
+
     private void UpdatePrefAndContinue(){
         SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.Pref_FileName),Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -203,6 +225,8 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         editor.commit();
 
         setContentView(R.layout.fragment_information);
+
+        isCompleted = true;
 
         Button start = (Button) findViewById(R.id.Info_Go);
         start.setOnClickListener(new View.OnClickListener(){
@@ -214,5 +238,15 @@ public class First_Time_Activity extends FragmentActivity implements View.OnClic
         start.setText(getString(R.string.Quiz_Final_Bt));
         TextView text = (TextView) findViewById(R.id.Info_text);
         text.setText(getString(R.string.Quiz_Final_Text));
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.i(TAG, "Back Pressed with " + hasStartedQuiz + " - " + isCompleted);
+        if(hasStartedQuiz && !isCompleted){
+            QuizFrag.BackButtonPressed();
+        }
+        else
+            super.onBackPressed();
     }
 }

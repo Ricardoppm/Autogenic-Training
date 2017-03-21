@@ -3,12 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="com.example.ricardomartins.lallaapp.Quizz.QuestionFragment"
+    android:name="com.example.ricardomartins.lallaapp.Statistics.Fragment_Note"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.example.ricardomartins.lallaapp.Quizz.QuestionFragment"
-    tools:listitem="@layout/fragment_question"
-    android:background="@color/Bg_Light_Yellow" />
+    tools:context="com.example.ricardomartins.lallaapp.Statistics.Fragment_Note_Physical"
+    tools:listitem="@layout/fragment_note" />

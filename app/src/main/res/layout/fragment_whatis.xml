@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/Bg_Light_Yellow">
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/Page_Headline"
@@ -15,19 +16,26 @@
         android:textColor="?android:attr/textColorPrimary"
         android:textStyle="normal|bold" />
 
-    <TextView
-        android:text="Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del '900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Page_Headline"
-        android:layout_alignParentEnd="false"
-        android:id="@+id/Page_text"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:textSize="18sp"
-        android:textAlignment="textStart"
-        android:textColor="?android:attr/textColorPrimary"
-        android:padding="32dp" />
+
+
+    <com.bluejamesbond.text.DocumentView xmlns:ext="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ext:documentView_antialias="true"
+        ext:documentView_cacheConfig="auto_quality"
+        ext:documentView_hyphen="-"
+        ext:documentView_maxLines="100"
+        ext:documentView_insetPaddingLeft="40dp"
+        ext:documentView_insetPaddingRight="40dp"
+        ext:documentView_lineHeightMultiplier="1.3"
+        ext:documentView_reverse="false"
+        ext:documentView_text="Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del '900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!"
+        ext:documentView_textAlignment="justified"
+        ext:documentView_textColor="@android:color/black"
+        ext:documentView_textFormat="plain"
+        ext:documentView_textSize="18sp"
+        ext:documentView_textSubPixel="true"
+        android:layout_below="@id/Page_Headline"
+        android:id="@+id/Page_text" />
 
 </RelativeLayout>

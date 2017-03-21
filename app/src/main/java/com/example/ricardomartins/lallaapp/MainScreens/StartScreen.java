@@ -42,6 +42,9 @@ public class StartScreen extends AppCompatActivity {
 
     private DateCalculator dateCalculator;
 
+    private static final int ResultsExitResult = 1;  // The request code
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -134,7 +137,7 @@ public class StartScreen extends AppCompatActivity {
         results.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),Results_Activity.class);
-                startActivity(i);
+                startActivityForResult(i,ResultsExitResult);
             }
         });
         if( !sharedPref.getBoolean(getString(R.string.Pref_FinishedProgram), false))
@@ -176,5 +179,15 @@ public class StartScreen extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == ResultsExitResult) {
+            Log.i("Entry", "Exited from Results with Quiz completed");
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
 
+    }
 }

@@ -164,9 +164,10 @@ public class Fragment_Frequency_BarChart extends Fragment {
         ls.setEnabled(false);
 
         YAxis yl = sChart.getAxisLeft();
-        yl.setAxisMinimum(0.5f); // this replaces setStartAtZero(true)
-        yl.setAxisMaximum(3.5f);
+        yl.setAxisMinimum(0.1f); // this replaces setStartAtZero(true)
+        yl.setAxisMaximum(3.9f);
         yl.setGranularity(1.0f);
+        yl.setTextSize(12f);
         yl.setValueFormatter( new ScatterYAxisValueFormatter());
         sChart.getAxisRight().setEnabled(false);
 
@@ -177,7 +178,7 @@ public class Fragment_Frequency_BarChart extends Fragment {
         xl.setAxisMinimum(-0.5f);
         xl.setAxisMaximum(6.5f);
         xl.setGranularity(1f);
-        xl.setTextSize(10f);
+        xl.setTextSize(12f);
         xl.setPosition(XAxis.XAxisPosition.BOTTOM);
 
 
@@ -323,9 +324,8 @@ public class Fragment_Frequency_BarChart extends Fragment {
         BarDataSet set1;
 
         set1 = new BarDataSet(WeekValues, "Weekly Frequency");
-        //set1.setColor( R.color.Stats_Freq);
+        set1.setColor( Color.rgb(48, 47, 131));
 
-        //set1.setColors(ColorTemplate.JOYFUL_COLORS);
 
         ArrayList<IBarDataSet> dataSets = new ArrayList<IBarDataSet>();
         dataSets.add(set1);

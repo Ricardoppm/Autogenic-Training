@@ -13,7 +13,7 @@
     <color name="Blue">#0055ff</color>
 
     <color name="Week_1">#003cb5</color>
-    <color name="Week_2">#4e230f</color>
+    <color name="Week_2">#823915</color>
     <color name="Week_3">#fc7f18</color>
     <color name="Week_4">#bb0000</color>
     <color name="Week_5">#78c51a</color>
@@ -33,6 +33,8 @@
     <color name="Week_7_Block">#645fc4e3</color>
     <color name="Week_2_Block">#644e230f</color>
     <color name="Week_1_Block">#64003cb5</color>
+    <color name="Note_filler">#f1f2ff</color>
+    <color name="Bg_Light_Yellow">#cfd2ff</color>
 
     <array name="Week_Colors">
         <item>@color/Week_1</item>

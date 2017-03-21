@@ -19,6 +19,8 @@ import com.squareup.leakcanary.LeakCanary;
 public class EntryScreen extends AppCompatActivity {
 
     private static final int OptionExitResult = 1;  // The request code
+    private static final int QuizExitResult = 2;  // The request code
+
     private SharedPreferences sharedPref;
 
     Button start,info,option;
@@ -50,7 +52,7 @@ public class EntryScreen extends AppCompatActivity {
             public void onClick(View v) {
                 if(first_time){
                     Intent i = new Intent(getBaseContext(),First_Time_Activity.class);
-                    startActivity(i);
+                    startActivityForResult(i, QuizExitResult);
                 }else{
                     Intent i = new Intent(getBaseContext(),StartScreen.class);
                     startActivity(i);
@@ -104,6 +106,13 @@ public class EntryScreen extends AppCompatActivity {
         // Check which request we're responding to
         if (requestCode == OptionExitResult) {
             Log.i("Entry", "Exited from options");
+
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
+        if (requestCode == QuizExitResult){
+            Log.i("Entry", "Exited from quiz");
 
             Intent intent = getIntent();
             finish();

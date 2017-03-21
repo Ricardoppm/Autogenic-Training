@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
 import com.example.ricardomartins.lallaapp.Database.DatabaseHelper;
@@ -86,7 +87,7 @@ public class OptScreen extends AppCompatActivity {
             }
         });
 
-        Button Benglish = (Button) findViewById(R.id.Opt_English);
+        ImageButton Benglish = (ImageButton) findViewById(R.id.Opt_English);
         Benglish.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Log.i("Opt", "Changing to english");
@@ -102,7 +103,7 @@ public class OptScreen extends AppCompatActivity {
             }
         });
 
-        Button Bitalia = (Button) findViewById(R.id.Opt_Italian);
+        ImageButton Bitalia = (ImageButton) findViewById(R.id.Opt_Italian);
         Bitalia.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Log.i("Opt", "Changing to italian");

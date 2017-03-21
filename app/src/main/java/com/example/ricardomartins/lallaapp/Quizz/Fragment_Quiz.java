@@ -1,6 +1,7 @@
 package com.example.ricardomartins.lallaapp.Quizz;
 
 import android.content.Context;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -142,10 +143,17 @@ public class Fragment_Quiz extends Fragment {
         }
     }
 
-    private void DisplayFinalMessage(){
-        radioGroup.setVisibility(View.INVISIBLE);
-        Quiz_QuestionNb.setVisibility(View.INVISIBLE);
-        Quiz_QuestionText.setText( getResources().getText(R.string.Quiz_Final_Text));
+    public void BackButtonPressed(){
+        Log.i("QuizFrag", "Back Pressed on questio " + Numeration);
+        if(Numeration>1){
+            Numeration--;
+            String Question_Number = String.format(getResources().getString(R.string.Quiz_Number), Numeration);
+            Quiz_QuestionText.setText(Questions[Numeration - 1]);
+            radioGroup.clearCheck();
+            Current_Answer=0;
+        }else{
+            mListener.onAnswerSelected(-2,0);
+        }
     }
 
     public interface OnFragmentInteractionListener {

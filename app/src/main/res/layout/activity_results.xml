@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.ricardomartins.lallaapp.Quizz.Results_Activity">
+    tools:context="com.example.ricardomartins.lallaapp.Quizz.Results_Activity"
+    android:background="@color/Bg_Light_Yellow">
 
 
     <TextView

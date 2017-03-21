@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bluejamesbond.text.DocumentView;
 import com.example.ricardomartins.lallaapp.R;
 
 
@@ -91,7 +92,7 @@ public class InfoScreen extends FragmentActivity {
             String [] headlines  = getResources().getStringArray(R.array.Info_Headline);
             String[] texts = getResources().getStringArray(R.array.Info_Text);
             ((TextView) rootView.findViewById(R.id.Page_Headline)).setText( headlines[index] );
-            ((TextView) rootView.findViewById(R.id.Page_text)).setText( texts[index]);
+            ((DocumentView) rootView.findViewById(R.id.Page_text)).setText( texts[index]);
             return rootView;
         }
     }

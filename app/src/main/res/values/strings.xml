@@ -31,7 +31,7 @@
 
     <!-- Parameters to Add_exercise_Fragment -->
     <string name="relax">Relax Level</string>
-    <string name="phy_sens">Physical Sentations</string>
+    <string name="phy_sens">Physical Sensations</string>
     <string name="remark">Remarks</string>
     <string name="Add_Morning">Morning</string>
     <string name="Add_Anoon">Day</string>
@@ -119,11 +119,13 @@
     </string-array>
 
     <!-- Statistics Activity -->
-    <string-array name="Statistics_StatToggle">
-        <item>Frequency</item>
-        <item>Relax</item>
-        <item>Period</item>
-    </string-array>
+    <string name="Statistics_Frequency"> Frequency</string>
+    <string name="Statistics_Relax"> Relax</string>
+    <string name="Statistics_Period"> Period</string>
+    <string name="Statistics_Physical"> Physical Sensations</string>
+    <string name="Statistics_Remarks"> Remarks</string>
+    <string name="Statistics_Selector">Select Statistic</string>
+
     <string-array name="Statistics_TimeValues">
         <item>Weekly</item>
         <item>Total</item>
@@ -204,6 +206,9 @@
     <string name="Pref_Notification_2">Night_Notification</string>
     <string name="Pref_FirstTimeWeekDisplay">first_time_week</string>
     <string name="Pref_FinishedProgram">finished_program</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

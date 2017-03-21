@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Week_phrase"
-        android:background="@color/Week_7"
+        android:background="@color/Week_2"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
         android:textStyle="normal|bold"
@@ -21,7 +21,9 @@
         android:paddingRight="10dp"
         android:textAlignment="center"
         android:fontFamily="monospace"
-        android:padding="20dp" />
+        android:padding="20dp"
+        android:minLines="2"
+        android:gravity="center_vertical" />
 
     <FrameLayout
         android:layout_width="match_parent"

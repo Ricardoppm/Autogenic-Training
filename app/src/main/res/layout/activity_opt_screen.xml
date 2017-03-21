@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Opt_Text"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="normal|bold"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
@@ -28,10 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Opt_NotificationText"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="normal|bold"
         android:layout_below="@id/Opt_Text"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:textColor="?android:attr/textColorPrimary" />
 
     <Button
@@ -76,10 +76,10 @@
         android:id="@+id/Opt_Language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="normal|bold"
         android:layout_below="@+id/Opt_CheckNight"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:textColor="?android:attr/textColorPrimary" />
 
 
@@ -90,7 +90,7 @@
         android:layout_above="@+id/Opt_Credits"
         android:layout_below="@id/Opt_Reset_Button"
         android:id="@+id/imageView"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:text="Created by PsychApp"
