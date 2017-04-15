@@ -20,12 +20,8 @@ import com.example.ricardomartins.lallaapp.Week.Activity_Progress;
 import com.example.ricardomartins.lallaapp.Database.DatabaseContract;
 import com.example.ricardomartins.lallaapp.Database.DatabaseHelper;
 import com.example.ricardomartins.lallaapp.DateCalculator.DateCalculator;
-import com.example.ricardomartins.lallaapp.Exercise_Activity;
 import com.example.ricardomartins.lallaapp.R;
 import com.example.ricardomartins.lallaapp.Week.WeekStatus;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class StartScreen extends AppCompatActivity {
 
@@ -86,27 +82,6 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
-        add = (Button) findViewById(R.id.addex);
-        add.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),Exercise_Activity.class);
-                startActivity(i);
-            }
-        });
-
-        db = (Button) findViewById(R.id.db);
-        db.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                ReadDB();
-            }
-        });
-
-        delete = (Button) findViewById(R.id.Bdelete);
-        delete.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                dbase.delete(DatabaseContract.Exercises.TABLE_NAME, null, null);
-            }
-        });
 
         progress = (Button) findViewById(R.id.Start_Progress);
         progress.setOnClickListener(new View.OnClickListener(){

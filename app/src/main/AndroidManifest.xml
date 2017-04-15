@@ -23,7 +23,6 @@
         <activity android:name=".Pager_Activities.InfoScreen" />
         <activity android:name=".MainScreens.OptScreen" />
         <activity android:name=".Week.WeekStatus" />
-        <activity android:name=".Exercise_Activity" />
         <activity android:name=".Quizz.First_Time_Activity" />
         <activity android:name=".Week.Activity_Progress" />
         <activity android:name=".Pager_Activities.Activity_HelpPager" />

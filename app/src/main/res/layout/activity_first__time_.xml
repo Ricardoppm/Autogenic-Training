@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Name_Date_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="26sp"
+        android:textSize="@dimen/General_Text_Size"
         android:textAllCaps="false"
         android:layout_weight="0.3"
         android:gravity="center_vertical"
@@ -41,7 +41,7 @@
             android:paddingTop="5dp"
             android:layout_weight="0.2"
             android:clickable="false"
-            android:textSize="26sp" />
+            android:textSize="@dimen/General_Text_Size" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:background="@drawable/rectangle_inactive"
-                android:textSize="30sp"
+                android:textSize="@dimen/General_Text_Size"
                 android:textAlignment="center"
                 android:padding="5dp"
                 android:layout_gravity="center_horizontal"
@@ -86,7 +86,7 @@
             android:paddingTop="5dp"
             android:layout_weight="0.2"
             android:clickable="false"
-            android:textSize="26sp" />
+            android:textSize="@dimen/General_Text_Size" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                 android:text="Date"
                 android:ems="10"
                 android:background="@drawable/rectangle_inactive"
-                android:textSize="30sp"
+                android:textSize="@dimen/General_Text_Size"
                 android:textAlignment="center"
                 android:padding="5dp"
                 android:layout_gravity="center_horizontal"
@@ -120,12 +120,22 @@
 
         <Button
             android:text="Continue"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/Quiz_Button_Width"
             android:layout_height="wrap_content"
             android:id="@+id/ND_button"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="0.1"
             android:background="@color/Toggle_on"
-            android:textColor="@color/Toggle_off" />
+            android:textColor="@color/Toggle_off"
+            android:textSize="@dimen/Entry_Button_Text"
+            android:paddingLeft="@dimen/Quiz_Button_SidePadding"
+            android:paddingRight="@dimen/Quiz_Button_SidePadding" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton"
+            android:textSize="@dimen/General_MediumText_Size"
+            style="@style/RadioButtonAppTheme" />
     </FrameLayout>
 </LinearLayout>

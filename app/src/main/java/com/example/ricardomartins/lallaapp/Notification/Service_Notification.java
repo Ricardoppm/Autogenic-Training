@@ -98,9 +98,9 @@ public class Service_Notification extends Service {
 
     private class PollTask extends AsyncTask<Void, Void, Void> {
 
-        private static final int MorningHour = 10;
-        private static final int AnoonHour = 16;
-        private static final int NightHour = 22;
+        private static final int MorningHour = 7;
+        private static final int AnoonHour = 14;
+        private static final int NightHour = 21;
         private int CurrentPeriod = -1;
 
         private static final long HourinMili = 1000*60*60;
@@ -179,7 +179,7 @@ public class Service_Notification extends Service {
                 next.set( c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH), NightHour, 0,0);
                 MilisTillAllarm= next.getTimeInMillis()-c.getTimeInMillis();
             }else{
-                CurrentPeriod=0; // nest is morning [22,24]
+                CurrentPeriod=0; // nest is morning [21,24]
                 next.set( c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH), 23, 59,59);
                 MilisTillAllarm= HourinMili*MorningHour +  (next.getTimeInMillis()-c.getTimeInMillis() + 1000) ;
             }

@@ -19,9 +19,9 @@
 
     <!-- Information Text -->
     <string-array name="Info_Headline">
-        <item>COS’É IL TRAINING AUTOGENO E COME NASCE PSYCHAPPTA?</item>
-        <item>QUALI SONO GLI EFFETTI BENEFICI DEL TA?</item>
-        <item>COSA SUCCEDE QUANDO SI PRATICA IL TA?</item>
+        <item>Cos’é il training autogeno e come nasce PsychAppTA?</item>
+        <item>Quali sono gli effetti benefici del TA?</item>
+        <item>Cosa succede durante il TA?</item>
     </string-array>
     <string-array name="Info_Text">
         <item>Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del \'900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!</item>
@@ -37,6 +37,7 @@
     <string name="Add_Anoon">Day</string>
     <string name="Add_Night">Night</string>
     <string name="Add_Optional">Optional</string>
+    <string name="Add_SaveBt">Save</string>
 
     <!-- Parameters to Week Status Fragment -->
     <!-- Weekdays in English-->
@@ -76,6 +77,7 @@
     <string name="Quiz_Init_Bt">Start Test!</string>
     <string name="Quiz_Final_Text">Thank you for completing the test. Now you are ready to start you training!\n\n Regularly complete your exercises and you will see the results in no time!</string>
     <string name="Quiz_Final_Bt">Start Training!</string>
+    <string name="Quiz_Next_Bt">Next</string>
     <string-array name="Quiz_Questions">
         <item>I feel tense</item>
         <item>I feel happy</item>
@@ -106,7 +108,6 @@
 
 
     <!-- Progress Activity-->
-    <!-- <string name="Progress_Week">Week %1$d\n%2$s</string> -->
     <string name="Progress_Week">Week %1$d</string>
     <string-array name="Progress_WeekTheme">
         <item>calm</item>
@@ -117,6 +118,7 @@
         <item>plexus</item>
         <item>forehead</item>
     </string-array>
+
 
     <!-- Statistics Activity -->
     <string name="Statistics_Frequency"> Frequency</string>
@@ -206,9 +208,6 @@
     <string name="Pref_Notification_2">Night_Notification</string>
     <string name="Pref_FirstTimeWeekDisplay">first_time_week</string>
     <string name="Pref_FinishedProgram">finished_program</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

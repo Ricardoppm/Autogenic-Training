@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -12,9 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:textAppearance="?attr/textAppearanceListItem"
-        android:text="12-3-2017 :3123123123123"
+        android:text="12-33"
         android:layout_weight="0.8"
-        android:textSize="16sp" />
+        android:textSize="@dimen/Opt_smallText"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/Note_Content"
@@ -24,5 +26,6 @@
         android:textAppearance="?attr/textAppearanceListItem"
         android:layout_weight="0.2"
         android:text="Hey there how are you this fine evening"
-        android:textSize="16sp" />
+        android:textSize="@dimen/Opt_smallText"
+        tools:ignore="HardcodedText" />
 </LinearLayout>

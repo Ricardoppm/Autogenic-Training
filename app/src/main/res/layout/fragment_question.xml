@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -10,9 +11,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?attr/textAppearanceListItem"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_margin="16dp"
-        android:textSize="24sp"
+        android:textSize="@dimen/General_MediumText_Size"
         android:text="I feel slightly less tense"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Bg_Light_Yellow">
@@ -10,11 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="24sp"
+        android:textSize="@dimen/General_Text_Size"
         android:padding="32dp"
-        android:text="COS’É IL TRAINING AUTOGENO E COME NASCE PSYCHAPPTA?"
+        android:text="Cos’é il training autogeno e come nasce PsychAppTA?"
         android:textColor="?android:attr/textColorPrimary"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        tools:ignore="HardcodedText" />
 
 
 
@@ -33,7 +35,7 @@
         ext:documentView_textAlignment="justified"
         ext:documentView_textColor="@android:color/black"
         ext:documentView_textFormat="plain"
-        ext:documentView_textSize="18sp"
+        ext:documentView_textSize="@dimen/General_MediumText_Size"
         ext:documentView_textSubPixel="true"
         android:layout_below="@id/Page_Headline"
         android:id="@+id/Page_text" />

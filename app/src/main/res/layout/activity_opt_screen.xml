@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Opt_Text"
-        android:textSize="30sp"
+        android:textSize="@dimen/Opt_SubTitle_text"
         android:textStyle="normal|bold"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
@@ -28,10 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Opt_NotificationText"
-        android:textSize="30sp"
+        android:textSize="@dimen/Opt_SubTitle_text"
         android:textStyle="normal|bold"
         android:layout_below="@id/Opt_Text"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/Opt_Vrt_Spacing"
         android:textColor="?android:attr/textColorPrimary" />
 
     <Button
@@ -39,10 +39,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Opt_Reset_Button"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="@dimen/Opt_VrtBt_Spacing"
         android:layout_below="@+id/Opt_IT"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/Toggle_off" />
+        android:textColor="@color/Toggle_off"
+        android:textSize="@dimen/Entry_Button_Text" />
 
     <CheckBox
         android:text="@string/Add_Morning"
@@ -50,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Opt_NotificationText"
         android:id="@+id/Opt_CheckMorning"
-        android:textSize="24sp"
+        android:textSize="@dimen/Entry_Button_Text"
         android:onClick="onCheckboxClicked" />
 
     <CheckBox
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Opt_CheckMorning"
         android:id="@+id/Opt_CheckAnoon"
-        android:textSize="24sp"
+        android:textSize="@dimen/Entry_Button_Text"
         android:onClick="onCheckboxClicked" />
 
     <CheckBox
@@ -68,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Opt_CheckAnoon"
         android:id="@+id/Opt_CheckNight"
-        android:textSize="24sp"
+        android:textSize="@dimen/Entry_Button_Text"
         android:onClick="onCheckboxClicked" />
 
     <TextView
@@ -76,10 +77,10 @@
         android:id="@+id/Opt_Language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="@dimen/Opt_SubTitle_text"
         android:textStyle="normal|bold"
         android:layout_below="@+id/Opt_CheckNight"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/Opt_Vrt_Spacing"
         android:textColor="?android:attr/textColorPrimary" />
 
 
@@ -90,7 +91,7 @@
         android:layout_above="@+id/Opt_Credits"
         android:layout_below="@id/Opt_Reset_Button"
         android:id="@+id/imageView"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="@dimen/Opt_Image_TopSpace" />
 
     <TextView
         android:text="Created by PsychApp"
@@ -98,7 +99,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:id="@+id/Opt_Credits" />
+        android:id="@+id/Opt_Credits"
+        android:textSize="@dimen/Opt_smallText" />
 
     <LinearLayout
         android:id="@+id/Opt_UK"
@@ -126,7 +128,7 @@
             android:layout_height="match_parent"
             android:id="@+id/Opt_UK_Text"
             android:textColor="?android:attr/textColorPrimary"
-            android:textSize="24sp"
+            android:textSize="@dimen/Entry_Button_Text"
             android:layout_weight="0.2"
             android:gravity="center_vertical"
             android:paddingLeft="20dp" />
@@ -158,7 +160,7 @@
             android:layout_height="match_parent"
             android:id="@+id/Opt_IT_Text"
             android:textColor="?android:attr/textColorPrimary"
-            android:textSize="24sp"
+            android:textSize="@dimen/Entry_Button_Text"
             android:layout_weight="0.2"
             android:gravity="center_vertical"
             android:paddingLeft="20dp" />

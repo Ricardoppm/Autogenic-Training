@@ -8,8 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/Week_PhraseDisplay"
-        android:textSize="76sp"
+        android:textSize="@dimen/Week_FirstTime_Message"
         android:textAlignment="center"
         android:gravity="center"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:text="My heartbeat is calm and relaxed"
+        android:background="@color/Blue"
+        android:paddingLeft="@dimen/Entry_Button_SidePadding"
+        android:paddingRight="@dimen/Entry_Button_SidePadding" />
 </LinearLayout>

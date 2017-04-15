@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/Stats_SearchBar_Size"
         android:id="@+id/Statistics_Selector"
         android:onClick="onPopUpClick"
         android:orientation="horizontal"
@@ -29,7 +29,8 @@
             android:layout_height="match_parent"
             android:textColor="@color/Toggle_off"
             android:layout_weight="0.4"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textSize="@dimen/Entry_Button_Text" />
 
     </LinearLayout>
 

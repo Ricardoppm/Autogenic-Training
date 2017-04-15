@@ -21,40 +21,9 @@
         android:layout_alignLeft="@+id/Start_Progress"
         android:layout_alignRight="@+id/Start_Progress"
         android:layout_alignParentTop="false"
-        android:layout_marginBottom="0dp"
         android:background="@color/Toggle_off"
-        android:textSize="20sp"
+        android:textSize="@dimen/Entry_Button_Text"
         android:textStyle="normal|bold" />
-
-    <Button
-        android:text="Add Exercise"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginTop="70dp"
-        android:id="@+id/addex"
-        android:layout_toRightOf="@+id/Bdelete"
-        android:layout_alignBottom="@+id/Bdelete"
-        android:visibility="invisible" />
-
-    <Button
-        android:text="Show Database"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:id="@+id/db"
-        android:layout_toRightOf="@+id/addex"
-        android:layout_alignBottom="@+id/addex"
-        android:visibility="invisible" />
-
-    <Button
-        android:text="Delete db"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/Bdelete"
-        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,7 +35,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_centerHorizontal="true"
         android:textStyle="normal|bold"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
+        android:textSize="@dimen/General_Text_Size"
+        android:text="Welcome Back, Laura!"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:text="@string/Start_ButtonProgress"
@@ -78,9 +50,7 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="20dp"
         android:background="@color/Toggle_off"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        android:textSize="20sp"
+        android:textSize="@dimen/Entry_Button_Text"
         android:textStyle="normal|bold"
         android:layout_alignLeft="@+id/Start_Statistics"
         android:layout_alignRight="@+id/Start_Statistics" />
@@ -92,7 +62,7 @@
         android:id="@+id/Start_Statistics"
         android:layout_below="@+id/Start_Progress"
         android:background="@color/Toggle_off"
-        android:textSize="20sp"
+        android:textSize="@dimen/General_Text_Size"
         android:textStyle="normal|bold"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -106,13 +76,13 @@
         android:id="@+id/Start_Final"
         android:layout_below="@+id/Start_Statistics"
         android:background="@color/Toggle_off"
-        android:textSize="20sp"
+        android:textSize="@dimen/Entry_Button_Text"
         android:textStyle="normal|bold"
         android:layout_marginTop="20dp"
         android:visibility="invisible"
         android:layout_centerHorizontal="true"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingLeft="@dimen/Entry_Button_SidePadding"
+        android:paddingRight="@dimen/Entry_Button_SidePadding" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -132,34 +102,4 @@
         android:layout_alignParentBottom="true"
         android:visibility="invisible" />
 
-    <TextView
-        android:text="Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/Bdelete"
-        android:layout_marginRight="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/Start_DateDisplay"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:visibility="invisible" />
-
-    <Button
-        android:text="Day -1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Start_ReduceDay"
-        android:layout_alignBottom="@+id/Start_DateDisplay"
-        android:layout_toLeftOf="@+id/Start_DateDisplay"
-        android:visibility="invisible" />
-
-    <Button
-        android:text="Day +1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Start_IncreaseDay"
-        android:layout_alignBottom="@+id/Start_DateDisplay"
-        android:layout_toRightOf="@+id/Start_DateDisplay"
-        android:visibility="invisible" />
 </RelativeLayout>

@@ -28,21 +28,23 @@
             android:id="@+id/DayNb"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textIsSelectable="false"
-            android:textSize="30sp"
+            android:textSize="@dimen/Opt_SubTitle_text"
             android:textAlignment="center"
             android:typeface="monospace"
             android:textStyle="normal|bold"
-            android:fontFamily="sans-serif"
             android:layout_weight="0.7"
-            android:gravity="fill" />
+            android:gravity="fill"
+            tools:ignore="HardcodedText" />
 
         <TextView
-            android:text="Monday"
+            android:text="Wednesday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/WeekDay"
             android:textAlignment="center"
-            android:layout_weight="0.3" />
+            android:layout_weight="0.3"
+            android:textSize="@dimen/Opt_smallText"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
@@ -57,7 +59,9 @@
         android:paddingEnd="15dp"
         android:layout_weight="0.25"
         android:scaleType="fitCenter"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:layout_width="0dp"
@@ -70,7 +74,8 @@
         android:paddingEnd="15dp"
         android:layout_weight="0.25"
         android:scaleType="fitCenter"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:layout_width="0dp"
@@ -81,5 +86,6 @@
         android:padding="5dp"
         android:layout_weight="0.25"
         android:scaleType="fitCenter"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        tools:ignore="ContentDescription" />
 </LinearLayout>

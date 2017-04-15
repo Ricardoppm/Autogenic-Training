@@ -1,9 +1,4 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="General_Text_Size">26sp</dimen>
     <dimen name="General_MediumText_Size">20sp</dimen>
@@ -18,10 +13,9 @@
     <!-- Opt Screen Dims -->
     <dimen name="Opt_SubTitle_text">30sp</dimen>
     <dimen name="Opt_smallText">16sp</dimen>
-    <dimen name="Opt_Image_TopSpace">35dp</dimen>
+    <dimen name="Opt_Image_TopSpace">60dp</dimen>
     <dimen name="Opt_Vrt_Spacing">20dp</dimen>
     <dimen name="Opt_VrtBt_Spacing">35dp</dimen>
-
 
     <!-- First_Time_Quizz-->
     <dimen name="Quiz_Button_SidePadding">15dp</dimen>
@@ -32,5 +26,7 @@
 
     <!-- Week -->
     <dimen name="Week_FirstTime_Message">70sp</dimen>
+
+
 
 </resources>

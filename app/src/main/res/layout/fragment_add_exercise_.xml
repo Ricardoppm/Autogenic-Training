@@ -5,7 +5,6 @@
     xmlns:mstb="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.ricardomartins.lallaapp.Week.Add_Exercise_Fragment"
-    android:backgroundTintMode="src_over"
     android:background="@color/Add_bg"
     android:weightSum="1"
     android:id="@+id/Add_layout">
@@ -22,13 +21,14 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:inputType="date"
             android:ems="10"
             android:id="@+id/date"
             android:text="data"
-            android:textColor="@android:color/black"
             android:layout_height="match_parent"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="@dimen/General_MediumText_Size"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,12 +45,11 @@
             android:text="period"
             android:layout_height="match_parent"
             android:id="@+id/period"
-            android:layout_weight="1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textStyle="normal|bold"
-            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
             android:layout_width="match_parent"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textSize="@dimen/General_MediumText_Size"
+            android:textStyle="normal|bold" />
 
 
     </LinearLayout>
@@ -67,16 +66,17 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/relax"
             android:ems="10"
             android:id="@+id/editText4"
-            android:layout_weight="1"
-            android:inputType="text"
             android:clickable="false"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:textAlignment="center" />
+            android:gravity="bottom|center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="@dimen/General_MediumText_Size"
+            android:textStyle="normal|bold" />
 
 
     </LinearLayout>
@@ -92,14 +92,15 @@
 
 
         <SeekBar
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:max="10"
             android:progress="5"
             android:id="@+id/relax"
-            android:layout_weight="1"
             style="?android:attr/seekBarStyle"
-            android:thumb="@drawable/apptheme_scrubber_control_normal_holo" />
+            android:thumb="@drawable/apptheme_scrubber_control_normal_holo"
+            android:paddingEnd="@dimen/Entry_Button_SidePadding"
+            android:paddingStart="@dimen/Entry_Button_SidePadding" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,11 +118,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/textView3"
-            android:layout_weight="1"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
             android:layout_marginBottom="10dp"
-            android:textAlignment="center"
-            android:gravity="center" />
+            android:gravity="bottom|center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="@dimen/General_MediumText_Size"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
@@ -136,21 +137,19 @@
         android:layout_gravity="center">
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="38dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/physical"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:paddingLeft="@dimen/Entry_Button_SidePadding"
+            android:paddingRight="@dimen/Entry_Button_SidePadding"
             android:maxLines="1"
             android:layout_gravity="center"
-            android:singleLine="true"
             android:textColorLink="@android:color/transparent"
             android:background="@android:drawable/screen_background_light_transparent"
             android:hint="@string/Add_Optional"
-            android:textAlignment="viewStart" />
+            android:textSize="@dimen/General_MediumText_Size" />
 
 
     </LinearLayout>
@@ -166,12 +165,14 @@
         <TextView
             android:text="@string/remark"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/textView9"
-            android:layout_weight="1"
             android:clickable="false"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:textAlignment="center" />
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:gravity="bottom|center_horizontal"
+            android:textSize="@dimen/General_MediumText_Size"
+            android:textStyle="normal|bold"
+            android:layout_marginBottom="10dp" />
 
     </LinearLayout>
 
@@ -185,19 +186,18 @@
         android:layout_weight="0.075">
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="38dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/remark"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:singleLine="true"
+            android:paddingLeft="@dimen/Entry_Button_SidePadding"
+            android:paddingRight="@dimen/Entry_Button_SidePadding"
+            android:maxLines="1"
             android:background="@android:drawable/screen_background_light_transparent"
             android:layout_gravity="center"
-            android:hint="@string/Add_Optional" />
-
+            android:hint="@string/Add_Optional"
+            android:textSize="@dimen/General_MediumText_Size" />
 
     </LinearLayout>
 
@@ -208,14 +208,13 @@
         android:layout_weight="0.4">
 
         <Button
-            android:text="save"
+            android:text="@string/Add_SaveBt"
             android:layout_height="wrap_content"
             android:id="@+id/save"
-            android:elevation="1dp"
-            android:layout_marginTop="15dp"
             android:layout_gravity="center_vertical|center_horizontal"
-            android:layout_width="120dp"
-            android:textColor="@color/Toggle_off" />
+            android:textColor="@color/Toggle_off"
+            android:textSize="@dimen/Entry_Button_Text"
+            android:layout_width="@dimen/Quiz_Button_Width" />
 
     </FrameLayout>
 

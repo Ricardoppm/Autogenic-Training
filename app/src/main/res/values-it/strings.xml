@@ -1,22 +1,212 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- App Name and Entry Screen Buttons Names-->
     <string name="app_name">Training Autogeno</string>
-    <string name="E_B_1">Inizio</string>
-    <string name="E_B_2">Informazione</string>
-    <string name="E_B_3">opzione</string>
+    <string name="Entry_Start">Inizio</string>
+    <string name="Entry_Practice">Diario di bordo</string>
+    <string name="Entry_Info">Informazioni</string>
+    <string name="Entry_Opt">Opzioni</string>
 
     <!-- Options Menu values-->
-    <string name="Opt_MenuName">Menu Opzione</string>
-    <string name="Opt_Notification">Notificazione:</string>
-    <string name="Opt_Language">Linguagio:</string>
+    <string name="Opt_MenuName">Menu</string>
+    <string name="Opt_Notification">Notifiche</string>
+    <string name="Opt_Language">Lingua</string>
+    <string name="Opt_Language_EN">Inglese</string>
+    <string name="Opt_Language_IT">Italiano</string>
     <string name="Opt_Reset">Reset Applicazione</string>
+    <string name="Opt_Dialog_Title">Reset Applicazione</string>
+    <string name="Opt_Dialog_Text">Sei sicuro di voler cancellare i tuoi dati?</string>
+
+    <!-- Information Text -->
+    <string-array name="Info_Headline">
+        <item>Cos’è il training autogeno e come nasce PsychAppTA?</item>
+        <item>Quali sono gli effetti benefici del TA?</item>
+        <item>Cosa succede durante il TA?</item>
+    </string-array>
+    <string-array name="Info_Text">
+        <item>Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del \'900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!</item>
+        <item>Agendo sul Sistema Nervoso il TA fa sì che lo stato di benessere e di salute generale migliorino. Nello specifico, esso aiuta a modulare le reazioni emotive e lo stress, favorisce la concentrazione, il rilassamento ed il recupero energetico. Aiuta inoltre ad alleviare sintomi dovuti a disturbi gastro-intestinali, dermatologici, cardiologici, sessuali, stati depressivi lievi, ansia,  insonnia funzionale ed altre condizioni di origine psicosomatica.</item>
+        <item>Con il TA si entra in una dimensione psichica particolare, caratterizzata da quello che viene chiamato \“ritmo alfa\”. Si tratta di un particolare ritmo cerebrale tipico del rilassamento e del pre-sonno che permette alla  mente di essere maggiormente ricettiva, pronta ad apprendere e creativa. In questa condizione aumenta  inoltre il livello di serotonina, anche conosciuto come “ormone della felicità”, in quanto in grado di migliorare il tono dell’umore.</item>
+    </string-array>
+
+    <!-- Parameters to Add_exercise_Fragment -->
+    <string name="relax">Grado di rilassamento</string>
+    <string name="phy_sens">Sensazioni fisiche</string>
+    <string name="remark">Annotazioni</string>
+    <string name="Add_Morning">Mattino</string>
+    <string name="Add_Anoon">Giorno</string>
+    <string name="Add_Night">Sera</string>
+    <string name="Add_Optional">Opzionali</string>
+    <string name="Add_SaveBt">Salva</string>
+
+    <!-- Parameters to Week Status Fragment -->
+    <!-- Weekdays in English-->
+    <string-array name="Week_Weekdays">
+        <item>Domenica</item>
+        <item>Lunedi</item>
+        <item>Martedi</item>
+        <item>Mercoledi</item>
+        <item>Giovedi</item>
+        <item>Venerdi</item>
+        <item>Sabato</item>
+    </string-array>
+    <string name="Week_Dialog_Title">Cancella esercizio</string>
+    <string name="Week_Dialog_Text">Sei sicuro di voler cancellare questo esercizio?</string>
+
+    <!-- Week Specific Text -->
+    <string-array name="Week_Text">
+        <item>Sono piacevolmente calmo</item>
+        <item>Il mio corpo è piacevolmente pesante</item>
+        <item>Il mio corpo è piacevolmente caldo</item>
+        <item>Il mio cuore batte forte e regolarmente</item>
+        <item>Il mio respiro è lento, profondo e regolare</item>
+        <item>Il mio plesso solare è piacevolmente caldo</item>
+        <item>La mia fronte è piacevolmente fresca</item>
+    </string-array>
+
+    <!-- First Time Section-->
+    <!-- Name Date Values-->
+    <string name="Name_Date_text">Prima di iniziare abbiammo ancora bisogno di qualche informazione per poter impostare l\'applicazione con i tuoi dati!</string>
+    <string name="Name_Date_date">Quando hai cominciato o comincerai il TA?</string>
+    <string name="Name_Date_name">Come ti chiami?</string>
+    <string name="Name_Name">Nome</string>
+
+    <!-- Quiz Values -->
+    <string name="Quiz_Number">Domanda %1$d:</string>
+    <string name="Quiz_Init_Text">Ciao %1$s, Ancora un piccolo sforzo!\n Al fine di aiutarci a valutare i tuoi progressi alla fine delle sette settimane di training, ti chiederemmo di  completare un piccolo questionario!</string>
+    <string name="Quiz_Init_Bt">Comincia!</string>
+    <string name="Quiz_Final_Text">Grazie per aver completato il questionario! Adesso sei pronto per iniziare il tuo training!\n\n Ricordati di fare con regolarità gli esercizi e i risultati non tarderanno ad arrivare!</string>
+    <string name="Quiz_Final_Bt">Inizia il Training!</string>
+    <string name="Quiz_Next_Bt">Avanti</string>
+    <string-array name="Quiz_Questions">
+        <item>Mi sento teso</item>
+        <item>Mi sento contento</item>
+        <item>Mi sento stanco e con poche energie</item>
+        <item>Mi addormento facilmente</item>
+        <item>Sento dolori diffusi in più parti del corpo</item>
+        <item>Riesco a godere delle piccole gioie quotidiane</item>
+        <item>Sono facilmente irritabile</item>
+        <item>Mi sento rilassato</item>
+        <item>Ho difficoltà a gestire le mie emozioni</item>
+        <item>Mi sento ben disposto verso gli altri</item>
+    </string-array>
+    <string-array name="Quiz_Answers">
+        <item>Mai</item>
+        <item>Raramente</item>
+        <item>Qualche volts</item>
+        <item>Spesso</item>
+        <item>Quasi sempre</item>
+    </string-array>
 
     <!-- Start Screen Values-->
-    <string name="Start_Welcome">Bienvenuto %1$s!</string>
-    <string name="Start_ButtonStatus">Settimana attuale</string>
-    <string name="Start_ButtonProgress">Progresso Settimanale</string>
-    <string name="Start_ButtonStatistics">Statistiche</string>
+    <string name="Start_Welcome">Ben tornato %1$s!</string>
+    <string name="Start_ButtonStatus">Esercizi della settimana</string>
+    <string name="Start_ButtonProgress">Prospetto settimane</string>
+    <string name="Start_ButtonStatistics">Analisi dati</string>
+    <string name="Start_ButtonFinal">Concludi il Training!</string>
+    <string name="Start_Results">Cambiamenti individuali</string>
 
+
+    <!-- Progress Activity-->
+    <string name="Progress_Week">Settimana %1$d</string>
+    <string-array name="Progress_WeekTheme">
+        <item>calma</item>
+        <item>pesantezza</item>
+        <item>calore</item>
+        <item>cuore</item>
+        <item>respiro</item>
+        <item>plesso solare</item>
+        <item>fronte</item>
+    </string-array>
+
+
+    <!-- Statistics Activity -->
+    <string name="Statistics_Frequency"> Frequenza</string>
+    <string name="Statistics_Relax"> Rilassamento</string>
+    <string name="Statistics_Period"> Periodo della giornata</string>
+    <string name="Statistics_Physical"> Sensazioni fisiche</string>
+    <string name="Statistics_Remarks"> Annotazioni</string>
+    <string name="Statistics_Selector"> Scegli statistica</string>
+
+    <string-array name="Statistics_TimeValues">
+        <item>Settimanale</item>
+        <item>Totale</item>
+    </string-array>
+    <string-array name="Statistics_WeekToggle">
+        <item>Sett1</item>
+        <item>Sett2</item>
+        <item>Sett3</item>
+        <item>Sett4</item>
+        <item>Sett5</item>
+        <item>Sett6</item>
+        <item>Sett7</item>
+    </string-array>
+    <string-array name="Stat_Weekdays">
+        <item>Dom.</item>
+        <item>Lun.</item>
+        <item>Mar.</item>
+        <item>Mer.</item>
+        <item>Gio.</item>
+        <item>Ven.</item>
+        <item>Sab.</item>
+    </string-array>
+
+    <!-- Final results Strings-->
+    <string-array name="Results_Progress">
+        <item>molto meno</item>
+        <item>meno</item>
+        <item>leggermente meno</item>
+        <item>ugualmente</item>
+        <item>leggermente più</item>
+        <item>più</item>
+        <item>molto più</item>
+    </string-array>
+    <string-array name="Results_Comment">
+        <item>Ti senti %1$s teso</item>
+        <item>Ti senti %1$s contento</item>
+        <item>Ti senti %1$s stanco e con poche energie</item>
+        <item>Ti addormenti %1$s facilmente</item>
+        <item>Ti senti %1$s dolori diffusi in più parti del corpo</item>
+        <item>Riesci a godere %1$s delle piccole gioie quotidiane</item>
+        <item>Sei %1$s irritabile</item>
+        <item>Ti senti %1$s rilassato</item>
+        <item>Hai %1$s difficoltà a gestire le tue emozioni</item>
+        <item>Ti senti %1$s ben disposto verso gli altri</item>
+    </string-array>
+    <string name="Results_Intro">Cos\'è cambiato dopo sette settimane di training?</string>
+    <string name="title_activity_results_">Results_Activity</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Notification Server Strings-->
+    <string name="Service_Text">%1$s,è ora di esercitarti!(%2$s)</string>
+    <string name="Service_Title">Promemoria esercizio!</string>
+
+
+    <!-- Intent Parameters -->
+    <string name="Intent_Day">intent_day</string>
+    <string name="Intent_Month">intent_month</string>
+    <string name="Intent_Year">intent_year</string>
+    <string name="Intent_WeekDay">intent_weekday</string>
+    <string name="Intent_ElapsedDays">intent_elapseddays</string>
+    <string name="Intent_WeekNumber">intent_weeknumber</string>
+    <string name="Intent_Notification_0">Morning_Intent</string>
+    <string name="Intent_Notification_1">Afternoon_Intent</string>
+    <string name="Intent_Notification_2">Night_Intent</string>
+
+    <!-- Shared Preferences for State of App-->
+    <string name="Pref_FileName">LallaAppPreferences</string>
+    <string name="Pref_first_time_starting">first_time</string>
+    <string name="Pref_name">username</string>
+    <string name="Pref_date">FirstDayDate</string>
+    <string name="Pref_day">FirstDay_Day</string>
+    <string name="Pref_month">FirstDay_Month</string>
+    <string name="Pref_year">FirstDay_Year</string>
+    <string name="Pref_dayofweek">FirstDay_DayOfWeek</string>
+    <string name="Pref_Notification_0">Morning_Notification</string>
+    <string name="Pref_Notification_1">Afternoon_Notification</string>
+    <string name="Pref_Notification_2">Night_Notification</string>
+    <string name="Pref_FirstTimeWeekDisplay">first_time_week</string>
+    <string name="Pref_FinishedProgram">finished_program</string>
 </resources>
+

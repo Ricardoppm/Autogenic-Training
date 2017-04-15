@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,8 +18,9 @@
         android:textColor="?android:attr/textColorPrimary"
         android:layout_margin="15dp"
         android:gravity="center"
-        android:textSize="30sp"
-        android:textAlignment="center" />
+        android:textSize="@dimen/Opt_SubTitle_text"
+        android:textAlignment="center"
+        tools:ignore="HardcodedText" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -32,48 +34,50 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer1"
-            android:textSize="20sp"
-            style="@style/RadioButtonAppTheme" />
+            android:textSize="@dimen/General_MediumText_Size"
+            style="@style/RadioButtonAppTheme"
+            android:text="Molto ganzo"
+            tools:ignore="HardcodedText" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer2"
-            android:textSize="20sp"
+            android:textSize="@dimen/General_MediumText_Size"
             style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer3"
-            android:textSize="20sp"
+            android:textSize="@dimen/General_MediumText_Size"
             style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer4"
-            android:textSize="20sp"
+            android:textSize="@dimen/General_MediumText_Size"
             style="@style/RadioButtonAppTheme" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer5"
-            android:textSize="20sp"
+            android:textSize="@dimen/General_MediumText_Size"
             style="@style/RadioButtonAppTheme" />
     </RadioGroup>
 
     <Button
-        android:text="Next"
-        android:layout_width="match_parent"
+        android:text="@string/Quiz_Next_Bt"
+        android:layout_width="@dimen/Quiz_Button_Width"
         android:layout_height="wrap_content"
         android:id="@+id/Quiz_NextButton"
         android:layout_weight="0.05"
-        android:layout_marginRight="125dp"
-        android:layout_marginLeft="125dp"
         android:background="@color/Toggle_on"
         android:textColor="@color/Toggle_off"
-        android:textSize="20sp"
-        android:textStyle="normal|bold" />
+        android:textSize="@dimen/Entry_Button_Text"
+        android:textStyle="normal|bold"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="HardcodedText" />
 </LinearLayout>

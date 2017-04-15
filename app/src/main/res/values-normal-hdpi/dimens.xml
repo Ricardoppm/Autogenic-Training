@@ -1,36 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="text_margin">10dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="General_Text_Size">26sp</dimen>
+    <dimen name="General_Text_Size">23sp</dimen>
     <dimen name="General_MediumText_Size">20sp</dimen>
-
 
     <!-- Entry screen dimens-->
     <dimen name="BigTitle_Size">60sp</dimen>
     <dimen name="Entry_Button_SidePadding">10dp</dimen>
     <dimen name="Entry_Button_TopPadding">50dp</dimen>
-    <dimen name="Entry_Button_Text">24sp</dimen>
+    <dimen name="Entry_Button_Text">22sp</dimen>
 
     <!-- Opt Screen Dims -->
-    <dimen name="Opt_SubTitle_text">30sp</dimen>
-    <dimen name="Opt_smallText">16sp</dimen>
-    <dimen name="Opt_Image_TopSpace">35dp</dimen>
+    <dimen name="Opt_SubTitle_text">26sp</dimen>
+    <dimen name="Opt_smallText">13sp</dimen>
+    <dimen name="Opt_Image_TopSpace">10dp</dimen>
     <dimen name="Opt_Vrt_Spacing">20dp</dimen>
     <dimen name="Opt_VrtBt_Spacing">35dp</dimen>
 
-
     <!-- First_Time_Quizz-->
     <dimen name="Quiz_Button_SidePadding">15dp</dimen>
-    <dimen name="Quiz_Button_Width">150dp</dimen>
+    <dimen name="Quiz_Button_Width">120dp</dimen>
 
     <!-- Statistics -->
     <dimen name="Stats_SearchBar_Size">50dp</dimen>
 
     <!-- Week -->
-    <dimen name="Week_FirstTime_Message">70sp</dimen>
+    <dimen name="Week_FirstTime_Message">60sp</dimen>
 
 </resources>
