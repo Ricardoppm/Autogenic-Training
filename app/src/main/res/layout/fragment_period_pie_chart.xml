@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ricardomartins.lallaapp.Statistics.Fragment_Period_PieChart">
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Statistics.Fragment_Period_PieChart">
 
     <com.github.mikephil.charting.charts.PieChart android:id="@+id/Statistics_Period"
         android:layout_width="match_parent"

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.example.ricardomartins.lallaapp.Week.ExerciseFragment"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Week.ExerciseFragment"
     tools:listitem="@layout/fragment_exercise"
     android:background="@color/Week_4" >
 </android.support.v7.widget.RecyclerView>

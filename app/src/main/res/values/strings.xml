@@ -1,6 +1,7 @@
 <resources>
 
     <!-- App Name and Entry Screen Buttons Names-->
+    <string name="app_LoGoname">EasyTA</string>
     <string name="app_name">Autogenic Training</string>
     <string name="Entry_Start">Start</string>
     <string name="Entry_Practice">Practice</string>
@@ -19,14 +20,14 @@
 
     <!-- Information Text -->
     <string-array name="Info_Headline">
-        <item>Cos’é il training autogeno e come nasce PsychAppTA?</item>
-        <item>Quali sono gli effetti benefici del TA?</item>
-        <item>Cosa succede durante il TA?</item>
+        <item>What\'s the Autogenic Training and why you should use EasyTA?</item>
+        <item>What are the benefits of the TA?</item>
+        <item>What happens during the TA?</item>
     </string-array>
     <string-array name="Info_Text">
-        <item>Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del \'900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!</item>
-        <item>Agendo sul Sistema Nervoso il TA fa sì che lo stato di benessere e di salute generale migliorino. Nello specifico, esso aiuta a modulare le reazioni emotive e lo stress, favorisce la concentrazione, il rilassamento ed il recupero energetico. Aiuta inoltre ad alleviare sintomi dovuti a disturbi gastro-intestinali, dermatologici, cardiologici, sessuali, stati depressivi lievi, ansia,  insonnia funzionale ed altre condizioni di origine psicosomatica.</item>
-        <item>Con il TA si entra in una dimensione psichica particolare, caratterizzata da quello che viene chiamato \“ritmo alfa\”. Si tratta di un particolare ritmo cerebrale tipico del rilassamento e del pre-sonno che permette alla  mente di essere maggiormente ricettiva, pronta ad apprendere e creativa. In questa condizione aumenta  inoltre il livello di serotonina, anche conosciuto come “ormone della felicità”, in quanto in grado di migliorare il tono dell’umore.</item>
+        <item> The Autogenic Training (AT) is a relaxation technique created by Schultz in the early 900\'s. This technique allows you to reduce stress and to make a more efficient use of your own mental and physical resources through a state of deep relaxation. EasyTA is addressed to all those who are going to start the AT and are followed by a professional trainer. The app\'s purpose is to help you overcome the first phase of training, which is fundamental to obtain long and short term results! </item>
+        <item>The AT acts on the nervous system, improving the state of well-being and general health. In particular, it helps modulate emotional reactions and stress, it favours concentration and relax, and it improves recovery. It also helps to relieve the symptoms caused by gastrointestinal, dermatological, cardiological and sexual disorders, mild depressive states, anxiety, insomnia and other conditions which have psychosomatic origins. </item>
+        <item> With the AT you enter in a specific psychic dimension, characterized by the alpha rhythm. This cerebral rhythm is associated to relaxation and pre-sleep conditions, it allows the mind to be more receptive, ready to learn and creative. In this condition the level of the serotonin (also known as the hormone of happiness)increases, helping to improve the mood. </item>
     </string-array>
 
     <!-- Parameters to Add_exercise_Fragment -->
@@ -74,10 +75,12 @@
     <!-- Quiz Values -->
     <string name="Quiz_Number">Question %1$d:</string>
     <string name="Quiz_Init_Text">Hi %1$s, just one more thing!\nIn order to help us evaluate your progress at the end of the seven weeks of training, we would like you to complete a small test!</string>
-    <string name="Quiz_Init_Bt">Start Test!</string>
+    <string name="Quiz_Init_Bt">Start Test</string>
     <string name="Quiz_Final_Text">Thank you for completing the test. Now you are ready to start you training!\n\n Regularly complete your exercises and you will see the results in no time!</string>
-    <string name="Quiz_Final_Bt">Start Training!</string>
+    <string name="Quiz_Final_Bt">Start Training</string>
     <string name="Quiz_Next_Bt">Next</string>
+    <string name="Quiz_Cont">Continue</string>
+
     <string-array name="Quiz_Questions">
         <item>I feel tense</item>
         <item>I feel happy</item>
@@ -128,9 +131,15 @@
     <string name="Statistics_Remarks"> Remarks</string>
     <string name="Statistics_Selector">Select Statistic</string>
 
+    <string name="Statistics_Max">Maximum Relax level</string>
+    <string name="Statistics_Relax_Avg">Relax Average</string>
+    <string name="Statistics_Week_Freq">Exercises per week</string>
+
+
+
     <string-array name="Statistics_TimeValues">
+        <item>Daily</item>
         <item>Weekly</item>
-        <item>Total</item>
     </string-array>
     <string-array name="Statistics_WeekToggle">
         <item>W1</item>

@@ -19,6 +19,13 @@
 	  <item name="android:textColor">#ffc800</item>
   </style>
 
+    <style name="ButtonAppCompatTheme" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/apptheme_btn_default_holo_light</item>
+        <item name="android:minHeight">26dip</item>
+        <item name="android:minWidth">40dip</item>
+        <item name="android:textColor">#ffc800</item>
+    </style>
+
     <style name="CheckBoxAppTheme" parent="android:Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/apptheme_btn_check_holo_light</item>
     </style>

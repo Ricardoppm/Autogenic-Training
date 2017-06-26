@@ -9,6 +9,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.example.ricardomartins.lallaapp.Quizz.QuestionFragment"
-    tools:listitem="@layout/fragment_question"
-    android:background="@color/Bg_Light_Yellow" />
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Quizz.QuestionFragment"
+    tools:listitem="@layout/fragment_question"/>

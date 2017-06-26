@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="MissingPrefix"
     android:id="@+id/Week_LAY">
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/Week_PhraseDisplay"
-        android:textSize="@dimen/Week_FirstTime_Message"
+        android:textSize="@dimen/Entry_Button_TopPadding"
         android:textAlignment="center"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:text="My heartbeat is calm and relaxed"
-        android:background="@color/Blue"
+        android:text="Io sono piacevolmente calmo"
+        android:background="@android:color/transparent"
         android:paddingLeft="@dimen/Entry_Button_SidePadding"
         android:paddingRight="@dimen/Entry_Button_SidePadding" />
 </LinearLayout>

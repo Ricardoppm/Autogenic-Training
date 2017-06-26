@@ -2,11 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ricardomartins.lallaapp.Week.Week_Fragment"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Week.Week_Fragment"
     android:orientation="vertical"
+    tools:ignore="MissingPrefix"
     android:id="@+id/Week_fragmentLayout">
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:text="@string/Name_Date_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

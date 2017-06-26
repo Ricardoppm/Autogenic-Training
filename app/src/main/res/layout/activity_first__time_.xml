@@ -7,10 +7,12 @@
     android:orientation="vertical"
     android:weightSum="1"
     android:focusableInTouchMode="true"
-    tools:context="com.example.ricardomartins.lallaapp.Quizz.First_Time_Activity">
+    tools:ignore="MissingPrefix"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Quizz.First_Time_Activity">
 
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:id="@+id/name_date_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +34,7 @@
         android:weightSum="1">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Name_Date_name"
@@ -51,6 +54,7 @@
             android:layout_weight="0.8">
 
             <EditText
+                fontPath="fonts/LobsterTwo-Bold.otf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
@@ -77,6 +81,7 @@
         android:weightSum="1">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Name_Date_date"
@@ -96,6 +101,7 @@
             android:layout_weight="0.8">
 
             <EditText
+                fontPath="fonts/LobsterTwo-Bold.otf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
@@ -106,6 +112,9 @@
                 android:padding="5dp"
                 android:layout_gravity="center_horizontal"
                 android:inputType="date"
+                android:textAllCaps="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:id="@+id/ND_dateinput" />
 
 
@@ -119,10 +128,12 @@
         android:layout_weight="0.1">
 
         <Button
-            android:text="Continue"
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:text="@string/Quiz_Cont"
             android:layout_width="@dimen/Quiz_Button_Width"
             android:layout_height="wrap_content"
             android:id="@+id/ND_button"
+            android:textAllCaps="false"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="0.1"
             android:background="@color/Toggle_on"
@@ -131,11 +142,5 @@
             android:paddingLeft="@dimen/Quiz_Button_SidePadding"
             android:paddingRight="@dimen/Quiz_Button_SidePadding" />
 
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioButton"
-            android:textSize="@dimen/General_MediumText_Size"
-            style="@style/RadioButtonAppTheme" />
     </FrameLayout>
 </LinearLayout>

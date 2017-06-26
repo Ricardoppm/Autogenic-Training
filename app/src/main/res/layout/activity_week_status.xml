@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.ricardomartins.lallaapp.Week.WeekStatus"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Week.WeekStatus"
     android:background="@color/Week_4">
 
     <FrameLayout

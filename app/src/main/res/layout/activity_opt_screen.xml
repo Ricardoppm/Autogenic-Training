@@ -9,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ricardomartins.lallaapp.MainScreens.OptScreen">
+    tools:ignore="MissingPrefix"
+    tools:context="pt.psychapp.ricardomartins.lallaapp.MainScreens.OptScreen">
 
     <TextView
         android:text="@string/Opt_MenuName"
@@ -17,6 +18,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/Opt_Text"
         android:textSize="@dimen/Opt_SubTitle_text"
+        android:textAllCaps="false"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:textStyle="normal|bold"
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="false"
@@ -26,50 +29,47 @@
     <TextView
         android:text="@string/Opt_Notification"
         android:layout_width="wrap_content"
+        android:textAllCaps="false"
         android:layout_height="wrap_content"
         android:id="@+id/Opt_NotificationText"
         android:textSize="@dimen/Opt_SubTitle_text"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:textStyle="normal|bold"
         android:layout_below="@id/Opt_Text"
         android:layout_marginTop="@dimen/Opt_Vrt_Spacing"
         android:textColor="?android:attr/textColorPrimary" />
 
-    <Button
-        android:text="@string/Opt_Reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Opt_Reset_Button"
-        android:layout_marginTop="@dimen/Opt_VrtBt_Spacing"
-        android:layout_below="@+id/Opt_IT"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/Toggle_off"
-        android:textSize="@dimen/Entry_Button_Text" />
-
     <CheckBox
         android:text="@string/Add_Morning"
         android:layout_width="wrap_content"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Opt_NotificationText"
         android:id="@+id/Opt_CheckMorning"
+        android:textAllCaps="false"
         android:textSize="@dimen/Entry_Button_Text"
         android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:text="@string/Add_Anoon"
         android:layout_width="wrap_content"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Opt_CheckMorning"
         android:id="@+id/Opt_CheckAnoon"
         android:textSize="@dimen/Entry_Button_Text"
+        android:textAllCaps="false"
         android:onClick="onCheckboxClicked" />
 
     <CheckBox
         android:text="@string/Add_Night"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:layout_below="@+id/Opt_CheckAnoon"
         android:id="@+id/Opt_CheckNight"
         android:textSize="@dimen/Entry_Button_Text"
+        android:textAllCaps="false"
         android:onClick="onCheckboxClicked" />
 
     <TextView
@@ -77,7 +77,9 @@
         android:id="@+id/Opt_Language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:textSize="@dimen/Opt_SubTitle_text"
+        android:textAllCaps="false"
         android:textStyle="normal|bold"
         android:layout_below="@+id/Opt_CheckNight"
         android:layout_marginTop="@dimen/Opt_Vrt_Spacing"
@@ -89,16 +91,18 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/icon"
         android:layout_above="@+id/Opt_Credits"
-        android:layout_below="@id/Opt_Reset_Button"
         android:id="@+id/imageView"
-        android:layout_marginTop="@dimen/Opt_Image_TopSpace" />
+        android:layout_marginTop="@dimen/Opt_Image_TopSpace"
+        android:layout_below="@+id/Opt_Reset_Button" />
 
     <TextView
         android:text="Created by PsychApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:layout_alignParentBottom="true"
         android:gravity="center"
+        android:textAllCaps="false"
         android:id="@+id/Opt_Credits"
         android:textSize="@dimen/Opt_smallText" />
 
@@ -129,6 +133,8 @@
             android:id="@+id/Opt_UK_Text"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="@dimen/Entry_Button_Text"
+            android:textAllCaps="false"
+            fontPath="fonts/LobsterTwo-Bold.otf"
             android:layout_weight="0.2"
             android:gravity="center_vertical"
             android:paddingLeft="20dp" />
@@ -161,14 +167,28 @@
             android:id="@+id/Opt_IT_Text"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="@dimen/Entry_Button_Text"
+            android:textAllCaps="false"
+            fontPath="fonts/LobsterTwo-Bold.otf"
             android:layout_weight="0.2"
             android:gravity="center_vertical"
             android:paddingLeft="20dp" />
     </LinearLayout>
 
-
-
-
+    <Button
+        android:text="@string/Opt_Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Opt_Reset_Button"
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
+        android:layout_marginTop="33dp"
+        android:textColor="@color/Toggle_off"
+        android:textSize="@dimen/Entry_Button_Text"
+        android:background="@color/Toggle_on"
+        android:layout_below="@+id/Opt_IT"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp" />
 
 
 </RelativeLayout>

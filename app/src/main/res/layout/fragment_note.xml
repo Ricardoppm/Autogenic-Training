@@ -5,9 +5,12 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:weightSum="1"
+    tools:ignore="MissingPrefix"
     android:id="@+id/Note_Layout">
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:id="@+id/Note_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +22,8 @@
         tools:ignore="HardcodedText" />
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:id="@+id/Note_Content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

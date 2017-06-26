@@ -11,6 +11,7 @@
     android:layout_marginBottom="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="15dp"
+    tools:ignore="MissingPrefix"
     android:layout_marginRight="15dp">
 
 
@@ -22,6 +23,8 @@
         android:weightSum="1">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,6 +40,8 @@
             tools:ignore="HardcodedText" />
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="Wednesday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,27 +56,24 @@
     <ImageButton
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/m_red"
+        app:srcCompat="@drawable/mattinorosso"
         android:id="@+id/Morning"
         android:background="@android:color/transparent"
-        android:padding="5dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
         android:layout_weight="0.25"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:contentDescription=""
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:layout_gravity="center"
+        android:padding="10dp" />
 
     <ImageButton
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/a_red"
+        app:srcCompat="@drawable/giornoverde"
         android:id="@+id/Anoon"
         android:background="@android:color/transparent"
-        android:padding="5dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
+        android:padding="10dp"
         android:layout_weight="0.25"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
@@ -80,10 +82,10 @@
     <ImageButton
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/n_red"
+        app:srcCompat="@drawable/notteverde"
         android:id="@+id/Night"
         android:background="@android:color/transparent"
-        android:padding="5dp"
+        android:padding="10dp"
         android:layout_weight="0.25"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"

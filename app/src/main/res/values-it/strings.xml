@@ -1,14 +1,15 @@
 <resources>
 
     <!-- App Name and Entry Screen Buttons Names-->
+    <string name="app_LoGoname">EasyTA</string>
     <string name="app_name">Training Autogeno</string>
     <string name="Entry_Start">Inizio</string>
     <string name="Entry_Practice">Diario di bordo</string>
     <string name="Entry_Info">Informazioni</string>
-    <string name="Entry_Opt">Opzioni</string>
+    <string name="Entry_Opt">Impostazioni</string>
 
     <!-- Options Menu values-->
-    <string name="Opt_MenuName">Menu</string>
+    <string name="Opt_MenuName">Menú</string>
     <string name="Opt_Notification">Notifiche</string>
     <string name="Opt_Language">Lingua</string>
     <string name="Opt_Language_EN">Inglese</string>
@@ -19,12 +20,12 @@
 
     <!-- Information Text -->
     <string-array name="Info_Headline">
-        <item>Cos’è il training autogeno e come nasce PsychAppTA?</item>
+        <item>Cos’è il training autogeno e a cosa serve EasyTA?</item>
         <item>Quali sono gli effetti benefici del TA?</item>
         <item>Cosa succede durante il TA?</item>
     </string-array>
     <string-array name="Info_Text">
-        <item>Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del \'900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima e più difficile fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!</item>
+        <item>Il Training Autogeno è una tecnica di rilassamento ideata agli inizi del \'900 che permette di ridurre lo stress e di utilizzare al meglio le proprie risorse attraverso il raggiungimento di uno stato di quiete. Questa applicazione si rivolge a tutti  coloro che stanno per iniziare un percorso di Training Autogeno con un professionista, al fine di aiutarli a superare la prima fase di allenamento, fondamentale per ottenere dei risultati a breve e lungo termine!</item>
         <item>Agendo sul Sistema Nervoso il TA fa sì che lo stato di benessere e di salute generale migliorino. Nello specifico, esso aiuta a modulare le reazioni emotive e lo stress, favorisce la concentrazione, il rilassamento ed il recupero energetico. Aiuta inoltre ad alleviare sintomi dovuti a disturbi gastro-intestinali, dermatologici, cardiologici, sessuali, stati depressivi lievi, ansia,  insonnia funzionale ed altre condizioni di origine psicosomatica.</item>
         <item>Con il TA si entra in una dimensione psichica particolare, caratterizzata da quello che viene chiamato \“ritmo alfa\”. Si tratta di un particolare ritmo cerebrale tipico del rilassamento e del pre-sonno che permette alla  mente di essere maggiormente ricettiva, pronta ad apprendere e creativa. In questa condizione aumenta  inoltre il livello di serotonina, anche conosciuto come “ormone della felicità”, in quanto in grado di migliorare il tono dell’umore.</item>
     </string-array>
@@ -43,11 +44,11 @@
     <!-- Weekdays in English-->
     <string-array name="Week_Weekdays">
         <item>Domenica</item>
-        <item>Lunedi</item>
-        <item>Martedi</item>
-        <item>Mercoledi</item>
-        <item>Giovedi</item>
-        <item>Venerdi</item>
+        <item>Lunedí</item>
+        <item>Martedí</item>
+        <item>Mercoledí</item>
+        <item>Giovedí</item>
+        <item>Venerdí</item>
         <item>Sabato</item>
     </string-array>
     <string name="Week_Dialog_Title">Cancella esercizio</string>
@@ -55,7 +56,7 @@
 
     <!-- Week Specific Text -->
     <string-array name="Week_Text">
-        <item>Sono piacevolmente calmo</item>
+        <item>Io Sono piacevolmente calmo</item>
         <item>Il mio corpo è piacevolmente pesante</item>
         <item>Il mio corpo è piacevolmente caldo</item>
         <item>Il mio cuore batte forte e regolarmente</item>
@@ -66,18 +67,19 @@
 
     <!-- First Time Section-->
     <!-- Name Date Values-->
-    <string name="Name_Date_text">Prima di iniziare abbiammo ancora bisogno di qualche informazione per poter impostare l\'applicazione con i tuoi dati!</string>
-    <string name="Name_Date_date">Quando hai cominciato o comincerai il TA?</string>
+    <string name="Name_Date_text">Prima di iniziare abbiammo bisogno di qualche informazione per poter impostare l\'applicazione con i tuoi dati!</string>
+    <string name="Name_Date_date">Qual è la data di inizio del TA?</string>
     <string name="Name_Date_name">Come ti chiami?</string>
     <string name="Name_Name">Nome</string>
 
     <!-- Quiz Values -->
     <string name="Quiz_Number">Domanda %1$d:</string>
-    <string name="Quiz_Init_Text">Ciao %1$s, Ancora un piccolo sforzo!\n Al fine di aiutarci a valutare i tuoi progressi alla fine delle sette settimane di training, ti chiederemmo di  completare un piccolo questionario!</string>
-    <string name="Quiz_Init_Bt">Comincia!</string>
+    <string name="Quiz_Init_Text">Ciao %1$s!\n Al fine di aiutarci a valutare i tuoi progressi al termine delle sette settimane di training, ti chiediamo di  completare un piccolo questionario...</string>
+    <string name="Quiz_Init_Bt">Comincia</string>
     <string name="Quiz_Final_Text">Grazie per aver completato il questionario! Adesso sei pronto per iniziare il tuo training!\n\n Ricordati di fare con regolarità gli esercizi e i risultati non tarderanno ad arrivare!</string>
-    <string name="Quiz_Final_Bt">Inizia il Training!</string>
+    <string name="Quiz_Final_Bt">Inizia il Training</string>
     <string name="Quiz_Next_Bt">Avanti</string>
+    <string name="Quiz_Cont">Continua</string>
     <string-array name="Quiz_Questions">
         <item>Mi sento teso</item>
         <item>Mi sento contento</item>
@@ -93,16 +95,16 @@
     <string-array name="Quiz_Answers">
         <item>Mai</item>
         <item>Raramente</item>
-        <item>Qualche volts</item>
+        <item>Qualche volta</item>
         <item>Spesso</item>
         <item>Quasi sempre</item>
     </string-array>
 
     <!-- Start Screen Values-->
-    <string name="Start_Welcome">Ben tornato %1$s!</string>
+    <string name="Start_Welcome">Ciao %1$s!</string>
     <string name="Start_ButtonStatus">Esercizi della settimana</string>
     <string name="Start_ButtonProgress">Prospetto settimane</string>
-    <string name="Start_ButtonStatistics">Analisi dati</string>
+    <string name="Start_ButtonStatistics">Monitoraggio</string>
     <string name="Start_ButtonFinal">Concludi il Training!</string>
     <string name="Start_Results">Cambiamenti individuali</string>
 
@@ -121,25 +123,30 @@
 
 
     <!-- Statistics Activity -->
-    <string name="Statistics_Frequency"> Frequenza</string>
+    <string name="Statistics_Frequency"> Frequenza esercizi</string>
     <string name="Statistics_Relax"> Rilassamento</string>
-    <string name="Statistics_Period"> Periodo della giornata</string>
+    <string name="Statistics_Period"> Distribuzione esercizi</string>
     <string name="Statistics_Physical"> Sensazioni fisiche</string>
     <string name="Statistics_Remarks"> Annotazioni</string>
-    <string name="Statistics_Selector"> Scegli statistica</string>
+    <string name="Statistics_Selector">Seleziona parametro</string>
+
+    <string name="Statistics_Max">Massimo grado di rilassamento</string>
+    <string name="Statistics_Relax_Avg">Grado di rilassamento medio</string>
+    <string name="Statistics_Week_Freq">Numero di esercizi di ogni settimana</string>
+
 
     <string-array name="Statistics_TimeValues">
+        <item>Giornaliero</item>
         <item>Settimanale</item>
-        <item>Totale</item>
     </string-array>
     <string-array name="Statistics_WeekToggle">
-        <item>Sett1</item>
-        <item>Sett2</item>
-        <item>Sett3</item>
-        <item>Sett4</item>
-        <item>Sett5</item>
-        <item>Sett6</item>
-        <item>Sett7</item>
+        <item>Set1</item>
+        <item>Set2</item>
+        <item>Set3</item>
+        <item>Set4</item>
+        <item>Set5</item>
+        <item>Set6</item>
+        <item>Set7</item>
     </string-array>
     <string-array name="Stat_Weekdays">
         <item>Dom.</item>

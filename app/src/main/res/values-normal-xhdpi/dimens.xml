@@ -10,6 +10,9 @@
     <dimen name="Entry_Button_TopPadding">50dp</dimen>
     <dimen name="Entry_Button_Text">24sp</dimen>
 
+    <dimen name="Stats_Selectir">24sp</dimen>
+
+
     <!-- Opt Screen Dims -->
     <dimen name="Opt_SubTitle_text">30sp</dimen>
     <dimen name="Opt_smallText">16sp</dimen>

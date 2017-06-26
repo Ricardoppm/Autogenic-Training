@@ -9,11 +9,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ricardomartins.lallaapp.MainScreens.StartScreen">
+    tools:ignore="MissingPrefix"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.MainScreens.StartScreen">
 
 
     <Button
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:text="@string/Start_ButtonStatus"
+        android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Start_WeekStatus"
@@ -26,6 +29,8 @@
         android:textStyle="normal|bold" />
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -41,6 +46,8 @@
         tools:ignore="HardcodedText" />
 
     <Button
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:text="@string/Start_ButtonProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,13 +63,15 @@
         android:layout_alignRight="@+id/Start_Statistics" />
 
     <Button
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:text="@string/Start_ButtonStatistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Start_Statistics"
         android:layout_below="@+id/Start_Progress"
         android:background="@color/Toggle_off"
-        android:textSize="@dimen/General_Text_Size"
+        android:textSize="@dimen/Entry_Button_Text"
         android:textStyle="normal|bold"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -70,6 +79,8 @@
         android:layout_alignLeft="@+id/Start_Final" />
 
     <Button
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:text="@string/Start_ButtonFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix">
     <item
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:id="@+id/Stats_freq"
         android:title="@string/Statistics_Frequency" />
 
     <item
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:id="@+id/Stats_relax"
         android:title="@string/Statistics_Relax"/>
 
     <item
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:id="@+id/Stats_period"
         android:title="@string/Statistics_Period"/>
 
     <item
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:id="@+id/Stats_phy"
         android:title="@string/Statistics_Physical"/>
 
     <item
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:id="@+id/Stats_remark"
         android:title="@string/Statistics_Remarks" />
 

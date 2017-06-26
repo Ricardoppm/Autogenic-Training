@@ -7,5 +7,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.example.ricardomartins.lallaapp.Statistics.Fragment_Note_Physical"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Statistics.Fragment_Note_Physical"
     tools:listitem="@layout/fragment_note" />

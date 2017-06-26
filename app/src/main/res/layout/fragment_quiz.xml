@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    tools:ignore="MissingPrefix"
     android:layout_height="match_parent"
     android:weightSum="1">
 
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Quiz_QuestionText"
@@ -23,6 +26,7 @@
         tools:ignore="HardcodedText" />
 
     <RadioGroup
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -31,6 +35,8 @@
         android:layout_margin="10dp">
 
         <RadioButton
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer1"
@@ -40,6 +46,8 @@
             tools:ignore="HardcodedText" />
 
         <RadioButton
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer2"
@@ -47,6 +55,8 @@
             style="@style/RadioButtonAppTheme" />
 
         <RadioButton
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer3"
@@ -54,6 +64,8 @@
             style="@style/RadioButtonAppTheme" />
 
         <RadioButton
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer4"
@@ -61,6 +73,8 @@
             style="@style/RadioButtonAppTheme" />
 
         <RadioButton
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Quiz_Answer5"
@@ -69,6 +83,8 @@
     </RadioGroup>
 
     <Button
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:text="@string/Quiz_Next_Bt"
         android:layout_width="@dimen/Quiz_Button_Width"
         android:layout_height="wrap_content"

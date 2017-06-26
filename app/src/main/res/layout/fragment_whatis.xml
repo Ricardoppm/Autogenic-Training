@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Bg_Light_Yellow">
+    tools:ignore="MissingPrefix">
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        fontPath="fonts/LobsterTwo-Bold.otf"
+        android:textAllCaps="false"
         android:id="@+id/Page_Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,8 +38,10 @@
         ext:documentView_textColor="@android:color/black"
         ext:documentView_textFormat="plain"
         ext:documentView_textSize="@dimen/General_MediumText_Size"
+        ext:documentView_textTypefacePath="fonts/LobsterTwo-Bold.otf"
         ext:documentView_textSubPixel="true"
         android:layout_below="@id/Page_Headline"
-        android:id="@+id/Page_text" />
+        android:id="@+id/Page_text"
+        android:background="@android:color/transparent" />
 
 </RelativeLayout>

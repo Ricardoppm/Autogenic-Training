@@ -5,19 +5,21 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
-    <dimen name="General_Text_Size">26sp</dimen>
-    <dimen name="General_MediumText_Size">20sp</dimen>
+    <dimen name="General_Text_Size">26dp</dimen>
+    <dimen name="General_MediumText_Size">20dp</dimen>
 
 
     <!-- Entry screen dimens-->
-    <dimen name="BigTitle_Size">60sp</dimen>
+    <dimen name="BigTitle_Size">60dp</dimen>
     <dimen name="Entry_Button_SidePadding">10dp</dimen>
     <dimen name="Entry_Button_TopPadding">50dp</dimen>
-    <dimen name="Entry_Button_Text">24sp</dimen>
+    <dimen name="Entry_Button_Text">24dp</dimen>
+
+
 
     <!-- Opt Screen Dims -->
-    <dimen name="Opt_SubTitle_text">30sp</dimen>
-    <dimen name="Opt_smallText">16sp</dimen>
+    <dimen name="Opt_SubTitle_text">30dp</dimen>
+    <dimen name="Opt_smallText">16dp</dimen>
     <dimen name="Opt_Image_TopSpace">35dp</dimen>
     <dimen name="Opt_Vrt_Spacing">20dp</dimen>
     <dimen name="Opt_VrtBt_Spacing">35dp</dimen>

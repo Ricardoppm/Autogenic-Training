@@ -4,7 +4,8 @@
     android:id="@+id/activity_start_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ricardomartins.lallaapp.Statistics.Activity_Statistics"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Statistics.Activity_Statistics"
+    tools:ignore="MissingPrefix"
     android:layout_alignParentBottom="false">
 
     <LinearLayout
@@ -24,13 +25,17 @@
             android:cropToPadding="false" />
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="@string/Statistics_Selector"
+            android:id="@+id/Statistics_SelectorTxt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/Toggle_off"
             android:layout_weight="0.4"
             android:gravity="center"
-            android:textSize="@dimen/Entry_Button_Text" />
+            android:textSize="@dimen/Stats_Selectir"
+            android:maxLines="1" />
 
     </LinearLayout>
 

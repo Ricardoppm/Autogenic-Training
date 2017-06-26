@@ -2,11 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:mstb="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.example.ricardomartins.lallaapp.Week.Add_Exercise_Fragment"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Week.Add_Exercise_Fragment"
     android:background="@color/Add_bg"
     android:weightSum="1"
+    tools:ignore="MissingPrefix"
+
     android:id="@+id/Add_layout">
 
     <LinearLayout
@@ -20,10 +21,12 @@
         android:layout_marginBottom="5dp">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
             android:layout_width="match_parent"
             android:ems="10"
             android:id="@+id/date"
             android:text="data"
+            android:textAllCaps="false"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat"
@@ -42,6 +45,8 @@
         android:layout_marginRight="100dp">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="period"
             android:layout_height="match_parent"
             android:id="@+id/period"
@@ -65,6 +70,8 @@
         android:gravity="center">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/relax"
@@ -92,6 +99,7 @@
 
 
         <SeekBar
+            fontPath="fonts/LobsterTwo-Bold.otf"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:max="10"
@@ -114,6 +122,8 @@
         android:layout_weight="0.075">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="@string/phy_sens"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -137,6 +147,8 @@
         android:layout_gravity="center">
 
         <EditText
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:inputType="textPersonName"
@@ -163,6 +175,8 @@
         android:layout_weight="0.075">
 
         <TextView
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="@string/remark"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -186,6 +200,8 @@
         android:layout_weight="0.075">
 
         <EditText
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:inputType="textPersonName"
@@ -208,13 +224,16 @@
         android:layout_weight="0.4">
 
         <Button
+            fontPath="fonts/LobsterTwo-Bold.otf"
+            android:textAllCaps="false"
             android:text="@string/Add_SaveBt"
             android:layout_height="wrap_content"
             android:id="@+id/save"
             android:layout_gravity="center_vertical|center_horizontal"
             android:textColor="@color/Toggle_off"
             android:textSize="@dimen/Entry_Button_Text"
-            android:layout_width="@dimen/Quiz_Button_Width" />
+            android:layout_width="@dimen/Quiz_Button_Width"
+            android:background="@color/Toggle_on" />
 
     </FrameLayout>
 

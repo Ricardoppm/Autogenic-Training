@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.ricardomartins.lallaapp.Quizz.Results_Activity"
-    android:background="@color/Bg_Light_Yellow">
+    tools:ignore="MissingPrefix"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.Quizz.Results_Activity">
 
 
     <TextView
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:text="@string/Results_Intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

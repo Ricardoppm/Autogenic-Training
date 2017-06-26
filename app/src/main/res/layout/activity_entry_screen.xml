@@ -9,9 +9,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.ricardomartins.lallaapp.MainScreens.EntryScreen"
+    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.MainScreens.EntryScreen"
     android:weightSum="1"
-    android:background="@color/default_screen_bg">
+    android:background="@color/default_screen_bg"
+    tools:ignore="MissingPrefix">
 
 
     <TextView
@@ -25,22 +26,26 @@
         android:layout_weight="0.6"
         android:gravity="center_vertical"
         android:textStyle="normal|bold"
-        android:lines="2" />
+        android:lines="2"
+        fontPath="fonts/LobsterTwo-Bold.otf"/>
 
     <Button
         android:text="@string/Entry_Practice"
+        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Bstart"
         android:layout_marginTop="@dimen/Entry_Button_TopPadding"
         android:textSize="@dimen/Entry_Button_Text"
+        android:id="@+id/Bstart"
         android:textStyle="normal|bold"
         android:background="@color/Toggle_off"
         android:layout_marginBottom="@dimen/Entry_Button_SidePadding"
         android:layout_marginLeft="@dimen/Entry_Button_SidePadding"
-        android:layout_marginRight="@dimen/Entry_Button_SidePadding" />
+        android:layout_marginRight="@dimen/Entry_Button_SidePadding"
+        fontPath="fonts/LobsterTwo-Bold.otf"/>
 
     <Button
+        android:textAllCaps="false"
         android:text="@string/Entry_Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,15 +53,20 @@
         android:textSize="@dimen/Entry_Button_Text"
         android:textStyle="normal|bold"
         android:background="@color/Toggle_off"
-        android:layout_margin="@dimen/Entry_Button_SidePadding" />
+        android:layout_margin="@dimen/Entry_Button_SidePadding"
+        fontPath="fonts/LobsterTwo-Bold.otf"/>
 
     <Button
+        android:textAllCaps="false"
         android:text="@string/Entry_Opt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Bopt"
+        fontPath="fonts/LobsterTwo-Bold.otf"
         android:textSize="@dimen/Entry_Button_Text"
         android:textStyle="normal|bold"
         android:background="@color/Toggle_off"
-        android:layout_margin="@dimen/Entry_Button_SidePadding" />
+        android:layout_margin="@dimen/Entry_Button_SidePadding"
+        />
+
 </LinearLayout>
