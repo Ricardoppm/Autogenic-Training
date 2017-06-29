@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,11 +96,10 @@ public class QuestionFragment extends Fragment {
             answer[index]= cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_ANSWER));
             index++;
         }
-        if(index != questionText.length)
-            //Log.e(TAG, "Error collectin database quizz records");
+
 
         for(int i = 0; i<questionText.length ; i++){
-            //Log.i(TAG, "Adding question "+ (i+1));
+            Log.i(TAG, "Adding question "+ (i+1));
 
             cursor.moveToNext();
             answer1 = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_ANSWER));

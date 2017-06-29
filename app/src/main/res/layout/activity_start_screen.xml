@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:ignore="MissingPrefix"
-    tools:context="com.example.ricardomartins.lallaapp.pt.example.ricardomartins.lallaapp.MainScreens.StartScreen">
+    tools:context="pt.psychapp.ricardomartins.lallaapp.MainScreens.StartScreen">
 
 
     <Button
@@ -95,22 +95,5 @@
         android:paddingLeft="@dimen/Entry_Button_SidePadding"
         android:paddingRight="@dimen/Entry_Button_SidePadding" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/help_icon"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false"
-        android:layout_marginRight="9dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/Start_Help"
-        android:layout_alignParentTop="false"
-        android:maxWidth="35dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:layout_alignParentBottom="true"
-        android:visibility="invisible" />
 
 </RelativeLayout>

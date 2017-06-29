@@ -6,7 +6,7 @@ package="com.example.ricardomartins.lallaapp">
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-<application android:allowBackup="true" android:icon="@drawable/icon" android:label="@string/app_LoGoname"
+<application android:allowBackup="true" android:icon="@drawable/taicon" android:label="@string/app_LoGoname"
     android:supportsRtl="true" android:theme="@style/AppTheme">
     <activity android:name="pt.psychapp.ricardomartins.lallaapp.MainScreens.LogoScreen" android:screenOrientation="portrait">
         <intent-filter>
@@ -22,7 +22,6 @@ package="com.example.ricardomartins.lallaapp">
     <activity android:name="pt.psychapp.ricardomartins.lallaapp.Week.WeekStatus" android:screenOrientation="portrait"/>
     <activity android:name="pt.psychapp.ricardomartins.lallaapp.Quizz.First_Time_Activity" android:screenOrientation="portrait"  android:windowSoftInputMode="stateHidden"/>
     <activity android:name="pt.psychapp.ricardomartins.lallaapp.Week.Activity_Progress" android:screenOrientation="portrait"/>
-    <activity android:name="pt.psychapp.ricardomartins.lallaapp.Pager_Activities.Activity_HelpPager" android:screenOrientation="portrait"/>
     <activity android:name="pt.psychapp.ricardomartins.lallaapp.Statistics.Activity_Statistics" android:screenOrientation="portrait"/>
 
     <service android:name="pt.psychapp.ricardomartins.lallaapp.Notification.Service_Notification">

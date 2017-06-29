@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 
 import pt.psychapp.ricardomartins.lallaapp.Database.DatabaseContract;
 import pt.psychapp.ricardomartins.lallaapp.Database.DatabaseHelper;
@@ -55,7 +56,6 @@ public class Results_Activity extends FragmentActivity implements  Fragment_Quiz
                 int answer = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_ANSWER));
                 int number = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.QuizAnswers.COLUMN_NB));
 
-                //Log.i("DBReader", "Question " + number + " of quiz  " +  quiz + " --> " + answer);
             }
 
             setContentView(R.layout.activity_results);

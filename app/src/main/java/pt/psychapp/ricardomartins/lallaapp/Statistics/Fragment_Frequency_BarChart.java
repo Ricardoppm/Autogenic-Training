@@ -197,7 +197,7 @@ public class Fragment_Frequency_BarChart extends Fragment {
         l.setDrawInside(false);
         l.setFormSize(10f);
         l.setFormToTextSpace(5f);
-        l.setTextSize(15f);
+        l.setTextSize(12f);
         l.setXEntrySpace(6f);
 
 

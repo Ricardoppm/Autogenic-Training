@@ -52,7 +52,7 @@ public class MyExerciseRecyclerViewAdapter extends RecyclerView.Adapter<MyExerci
         if(mValues.get(position).Bnight){
             //Log.i("List", "Change night to green");
             holder.BtNight.setImageResource( R.drawable.notteverde);
-        }else{ holder.BtNight.setImageResource( R.drawable.notterosso); }
+        }else{ holder.BtNight.setImageResource( R.drawable.notterossa); }
 
         holder.BtMorning.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {

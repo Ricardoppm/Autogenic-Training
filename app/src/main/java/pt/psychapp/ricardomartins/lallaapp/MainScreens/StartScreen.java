@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import pt.psychapp.ricardomartins.lallaapp.Quizz.Results_Activity;
 import pt.psychapp.ricardomartins.lallaapp.Statistics.Activity_Statistics;
-import pt.psychapp.ricardomartins.lallaapp.Pager_Activities.Activity_HelpPager;
 import pt.psychapp.ricardomartins.lallaapp.Week.Activity_Progress;
 import pt.psychapp.ricardomartins.lallaapp.Database.DatabaseContract;
 import pt.psychapp.ricardomartins.lallaapp.Database.DatabaseHelper;
@@ -88,14 +87,6 @@ public class StartScreen extends AppCompatActivity {
         progress.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent i = new Intent(getBaseContext(),Activity_Progress.class);
-                startActivity(i);
-            }
-        });
-
-        help = (ImageButton) findViewById(R.id.Start_Help);
-        help.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                Intent i = new Intent(getBaseContext(),Activity_HelpPager.class);
                 startActivity(i);
             }
         });

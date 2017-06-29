@@ -132,7 +132,7 @@
 
     <string name="Statistics_Max">Massimo grado di rilassamento</string>
     <string name="Statistics_Relax_Avg">Grado di rilassamento medio</string>
-    <string name="Statistics_Week_Freq">Numero di esercizi di ogni settimana</string>
+    <string name="Statistics_Week_Freq">Numero di esercizi della settimana</string>
 
 
     <string-array name="Statistics_TimeValues">
